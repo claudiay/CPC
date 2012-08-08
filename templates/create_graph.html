@@ -1,0 +1,46 @@
+<style>
+{% for square in squares %}
+div#{{square}} {
+        width:50px;
+	height:50px;
+        padding:10px;
+        border:1px solid #aaaaaa;
+	float:left;
+}
+{% endfor %}
+</style>
+<script type="text/javascript">
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+<div id="plots">
+	{% for square in squares %}
+		{% if square[1] == "1" and square[0] != "A" %}
+		<br><br><br<br><br><br>
+		{% endif %}
+	<div id={{square}} ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	{% endfor %}	
+</div>
+<div id="readyplants">
+	{% for square in squares %}							  	
+		{% if square[1] == "1" %}
+		<br><br>									        
+		{% endif %}
+	<img id={{square+"plant"}} src="static/eggplant.gif" draggable="true" ondragstart="drag(event)"/>
+        {% endfor %}
+</div>
