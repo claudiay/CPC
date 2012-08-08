@@ -1,0 +1,11 @@
+div#main {
+        background-color: #00CCCC;
+}
+div#menu {
+	background-color: #00CCCC;
+	border: 1px solid #00CCCC;
+}
+div#graph {
+        background-color: #006699;
+	border: 10px solid black;
+}
