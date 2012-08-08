@@ -1,0 +1,11 @@
+Companion Planting Companion
+-Generates optimal planting layout
+
+
+Flask based webapp
+to run virutalenv
+source env/bin/activate
+
+to create new DB
+>>> import model
+>>> model.db.create_all()
