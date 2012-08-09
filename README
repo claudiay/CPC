@@ -1,10 +1,24 @@
-Companion Planting Companion
+################################
+# Companion Planting Companion #
+################################
 -Generates optimal planting layout
+
+#############
+# Structure #
+#############
+index.html
+-start page
+plots.html
+-collects state, city, season, plot size, and list of plants
+swap.html
+-allows user to pre-place plants
+generate.html
+-returns the generated optimal plan
 
 
 Flask based webapp
 to run virutalenv
-source env/bin/activate
+$source env/bin/activate
 
 to create new DB
 >>> import model

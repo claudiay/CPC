@@ -8,21 +8,33 @@ from model import Location, db
 
 app = Flask(__name__)
 
+# Front page
 @app.route("/")
 def home():
-    states = db.session.query(distinct(Location.state))
-    cities = []
-    picked_state = "California"
-    for entry in db.session.query(Location).filter(Location.state == picked_state):
-        city = entry.city
-	if len(city) > 1:
-	    if city not in cities:
-	        cities.append(city)
-    seasons = ['spring', 'summer', 'fall', 'winter']
-    squares = generate_squares(3, 3)
-    return render_template('/index.html', cities=sorted(cities), states=states, 
-    			seasons=seasons, squares=squares)
+    return render_template('/index.html')
 
+# Step 1
+# Asks for state, city, season, plot size, and plants. 
+@app.route("/info.html")
+def info():
+    states = db.session.query(distinct(Location.state))
+    seasons = ['spring', 'summer', 'fall', 'winter']
+    return render_template('/info.html', states=states, seasons=seasons)
+
+# Generates cities to select, based on selected state.
+@app.route("/get_cities", methods=["GET"])
+def generate_cities():
+    state = request.args['state_id']
+    cities = []
+    for entry in db.session.query(Location).filter(Location.state == state):
+        city = entry.city
+        if len(city) > 1:
+            if city not in cities:
+	        cities.append(city)
+    return jsonify(cities=sorted(cities))
+
+# Step 2
+# Generates plots and plants, for user to place any pre-planned plants
 @app.route("/plots", methods=["POST"])
 def create_plot():
     width = int(request.form['width'])
