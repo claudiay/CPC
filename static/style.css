@@ -1,11 +1,18 @@
+body {
+	background-color: #00CC99;
+	font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+	font-family: 'The Girl Next Door', cursive;
+}
 div#main {
-        background-color: #00CCCC;
+        background-color: #FFF;
 }
 div#menu {
-	background-color: #00CCCC;
-	border: 1px solid #00CCCC;
+	background-color: #FFF;
+	border: 1px solid #000;
 }
 div#graph {
-        background-color: #006699;
+        background-color: #FFF;
 	border: 10px solid black;
 }
