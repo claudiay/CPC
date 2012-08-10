@@ -1,3 +1,4 @@
+import json
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 
@@ -11,12 +12,31 @@ def add(item):
 def save_all():
     db.session.commit()
 
-class States(db.Model):
+# common_name, plant_type, scientific_name, helps, helped_by, 
+# attracts, repels, avoid, comment
+class Plants(db.Model):
     id = db.Column(db.Integer, primary_key = True)
-    name = db.Column(db.String(64), nullable = False)
+    common_name = db.Column(db.String(50), nullable = False)
+    plant_type = db.Column(db.String(10), nullable = False)
+    scientific_name = db.Column(db.String(50), nullable = True)
+    helps = db.Column(db.String(500), nullable=True)
+    helped_by = db.Column(db.String(500), nullable=True)
+    attracts = db.Column(db.String(500), nullable=True)
+    repels = db.Column(db.String(500), nullable=True)
+    avoid = db.Column(db.String(500), nullable=True)
+    comment = db.Column(db.String(700), nullable=True)
 
-    def __init__(self, name):
-        self.name = name
+    def __init__(self, common_name, plant_type, scientific_name, helps,
+       		helped_by, attracts, repels, avoid, comment):
+	self.common_name = common_name
+	self.plant_type = plant_type
+	self.scientific_name = scientific_name
+	self.helps = json.dumps(helps)
+	self.helped_by = json.dumps(helped_by)
+	self.attracts = json.dumps(attracts)
+	self.repels = json.dumps(repels)
+	self.avoid = json.dumps(avoid)
+	self.comment = comment
 
 # "zip code", "state abbreviation", "latitude", "longitude", "city", "state"
 class Location(db.Model):

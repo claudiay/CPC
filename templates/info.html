@@ -22,36 +22,9 @@ h1 {
 	</div>
 	
 	<div id="menu">
-	<form action="/get_cities">	
-		<h3>Select State:</h3>
-			<select name="state_id" id="select_state">
-			<option>--State--</option>
-			 {% for state in states[:-1] %}
-			 <option value={{state[0]}}>{{state[0]}}</option>
-			 {% endfor %}
-			</select>
-			<noscript>
-			    <input type="submit" value="Load Cities" />
-			</noscript>
-		<h3>Select City:</h3>
-			<select id="city_id">
-			<option>--City--</option>
-			</select>
-			<script type="text/javascript" charset="utf-8">
-			$(function(){
-			  $("select#select_state").change(function(){
-			    $.getJSON("/get_cities",{id: $(this).val(), ajax: 'true'}, function(j){
-			      var options = '';
-			      for (var i = 0; i < j.length; i++) {
-			        options += '<option value="' + j[i] + '">' + j[i] + '</option>';
-			      }
-			      $("select#city_id").html(options);
-			    })
-			  })
-			})
-			</script>
+	<form action="/get_location">	
 		<h3>Input Zipcode:</h3>
-		
+		<input type="text" name="zip_code" /><br />
 		<h3>Select Season:</h3>
 			<select>
 			<option>--Season--</option>
