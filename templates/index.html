@@ -28,7 +28,32 @@ h1 {
 	<li>Set any pre-planned plants.
 	<li>Generate your planting guide and print out the pdf to use in your garden.
 	</ul>
-	<center><h2><a href="/info.html">Click here to start</a></h2></center>
+	<center>
+	<form action="/select_plants">	
+		<h3>Input Zipcode:</h3>
+		<input type="text" name="zip_code" /><br />
+		<h3>Select Season:</h3>
+			<select name="season_id">
+			{% for season in seasons %}
+			<option>{{season}}</option>
+			{% endfor %}
+			</select>
+		<h3>Select Plot Size:</h3>	
+		Width:
+			<select name="plot-width">
+			{% for num in range(9) %}
+			<option>{{num+1}}</option>
+			{% endfor %}
+			</select>
+		Length:
+			<select name="plot-length">
+			{% for num in range(24) %}
+			<option>{{num+1}}</option>
+			{% endfor %}
+		</select>
+		<input type="submit" name="action" value="Submit" />
+	</form>
+	</center>
 	</div>
 </body>
 </html>

@@ -4,34 +4,37 @@ import setplants
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import distinct
 from grid import generate_squares
-from model import Location, db
+from model import Location, Plants, db
 
 app = Flask(__name__)
 
 # Front page
+# Asks for zipcode and season 
 @app.route("/")
 def home():
-    return render_template('/index.html')
+    seasons = ['Spring', 'Summer', 'Fall', 'Winter']
+    return render_template('/index.html', seasons=seasons)
 
 # Step 1
-# Asks for state, city, season, plot size, and plants. 
-@app.route("/info.html")
+# Asks for zipcode, season, plot size, and plants. 
+@app.route("/select_plants", methods=["GET"])
 def info():
-    states = db.session.query(distinct(Location.state))
-    seasons = ['spring', 'summer', 'fall', 'winter']
-    return render_template('/info.html', states=states, seasons=seasons)
+    zipcode = request.args['zip_code']
+    season = request.args['season_id']
+    width = request.args['plot-width']
+    length = request.args['plot-length']
+    location = db.session.query(Location).filter(Location.zipcode == zipcode).one()
+    state = location.state
+    city = location.city
+    latitude = location.latitude
+    longitude = location.longitude
+    plant_list = db.session.query(Plants).all()
+    list_len = int(len(plant_list)/2)
+    return render_template('/select_plants.html', season=season,
+			width=width, length=length, state=state,
+			city=city, plant_list=plant_list,
+			list_len=list_len)
 
-# Generates cities to select, based on selected state.
-@app.route("/get_cities", methods=["GET"])
-def generate_cities():
-    state = request.args['state_id']
-    cities = []
-    for entry in db.session.query(Location).filter(Location.state == state):
-        city = entry.city
-        if len(city) > 1:
-            if city not in cities:
-	        cities.append(city)
-    return jsonify(cities=sorted(cities))
 
 # Step 2
 # Generates plots and plants, for user to place any pre-planned plants
