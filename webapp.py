@@ -9,20 +9,20 @@ from model import Location, Plants, db
 app = Flask(__name__)
 
 # Front page
-# Asks for zipcode and season 
+# Asks for zipcode, season, and plot size 
 @app.route("/")
 def home():
     seasons = ['Spring', 'Summer', 'Fall', 'Winter']
     return render_template('/index.html', seasons=seasons)
 
 # Step 1
-# Asks for zipcode, season, plot size, and plants. 
+# Asks user to select plants.
 @app.route("/select_plants", methods=["GET"])
 def info():
     zipcode = request.args['zip_code']
     season = request.args['season_id']
-    width = request.args['plot-width']
-    length = request.args['plot-length']
+    width = int(request.args['plot-width'])
+    length = int(request.args['plot-length'])
     location = db.session.query(Location).filter(Location.zipcode == zipcode).one()
     state = location.state
     city = location.city
@@ -30,13 +30,21 @@ def info():
     longitude = location.longitude
     plant_list = db.session.query(Plants).all()
     list_len = int(len(plant_list)/2)
+    size = width * length
     return render_template('/select_plants.html', season=season,
 			width=width, length=length, state=state,
 			city=city, plant_list=plant_list,
-			list_len=list_len)
+			list_len=list_len, size=size, longitude=longitude,
+			latitude=latitude)
+
+# Step 1.2
+# Generates list of plants, caps the list at the size of the plot.
+@app.route("/list", methods=["GET"])
+def modify_list():
+    size = int(request.args['size'])
+    return render_template('/list.html', size=size)
 
 
-# Step 2
 # Generates plots and plants, for user to place any pre-planned plants
 @app.route("/plots", methods=["POST"])
 def create_plot():
