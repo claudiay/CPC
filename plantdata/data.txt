@@ -1,0 +1,1432 @@
+{
+ "flo": {
+  "Nasturtium": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "aphids", 
+    " cabbage looper", 
+    " squash bug", 
+    " white fly", 
+    " cucumber beetles"
+   ], 
+   "comment": "radish{{Citation needed|date=April 2012}}, cauliflower", 
+   "helped_by": [
+    "Many plants", 
+    " especially cucurbits (melons", 
+    " cucumbers", 
+    " gourds)", 
+    " beans", 
+    " tomatoes", 
+    " apple trees", 
+    " brassicas (broccoli", 
+    " cabbage", 
+    " etc.)", 
+    " radish{{Citation needed|date=April 2012}}"
+   ], 
+   "helps": [
+    "''Tropaeolum majus''"
+   ], 
+   "plant_type": "flower", 
+   "repels": [
+    "predatory insects"
+   ], 
+   "scientific_name": "Nasturtium"
+  }, 
+  "Lupin": {
+   "attracts": [
+    "Honeybees"
+   ], 
+   "avoid": [
+    "tomatoes and other solanaceae"
+   ], 
+   "comment": "This wildflower is a legume, hosting bacteria that fixes nitrogen in the soil, fertilizing it for neighboring plants", 
+   "helped_by": [
+    "summer savory"
+   ], 
+   "helps": [
+    "Cucurbits", 
+    " brassica", 
+    " lettuce", 
+    " rosemary", 
+    " dill", 
+    " strawberry"
+   ], 
+   "plant_type": "flower", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Lupinus"
+  }, 
+  "Petunia": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Is a trap crop almost identical to geraniums in function", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "cucurbits (squash", 
+    " pumpkins", 
+    " cucumbers)", 
+    " asparagus"
+   ], 
+   "plant_type": "flower", 
+   "repels": [
+    "leafhoppers", 
+    " Japanese beetles", 
+    " aphids", 
+    " asparagus beetle"
+   ], 
+   "scientific_name": "Petunia x hybrida"
+  }, 
+  "Sunflower": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Was grown as a companion for corn(maize) before modern Europeans arrived in the Americas, supposedly increases their production, ants herd aphids onto sunflowers, keeping them off neighboring plants", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "corn", 
+    " tomatoes"
+   ], 
+   "plant_type": "flower", 
+   "repels": [
+    "aphids"
+   ], 
+   "scientific_name": "Helianthus annuus"
+  }, 
+  "Tagetes|Marigold": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Marigolds are a wonder-drug of the companion plant world, invoking the saying \"plant them everywhere in your garden\". French marigolds produce a pesticidal chemical from their roots, so strong it lasts years after they are gone. Mexican marigolds do the same, but are so strong they will inhibit the growth of some more tender herbs. Certain Varieties of marigolds (''Tagetes'') can help manage eelworms (Root-knot nematode) when planted the year before [http://www.ncagr.gov/agronomi/pdffiles/nnote1.pdf]. \nTagetes has also been found effective against perennial weeds such as Ranunculus ficaria (Celandine), Aegopodium podagraria (Ground elder), Glechoma hederacea (Ground ivy), Agropyron repens (Couch grass), Convolvulus arvensis (Field bindweed), Equisetum arvense (Field/Common Horsetail) and other 'starchy' weeds.{{citation needed|date=April 2012}}", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "most plants", 
+    " especially tomatoes and peppers", 
+    " cucurbits (cucumbers", 
+    " gourds", 
+    " squash)", 
+    "  brassicas (broccoli", 
+    " kale", 
+    " cabbage)"
+   ], 
+   "plant_type": "flower", 
+   "repels": [
+    "nematodes", 
+    " beet leaf hoppers", 
+    "  other pests"
+   ], 
+   "scientific_name": "Asteraceae Calendula Tagetes"
+  }, 
+  "Tansy": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Toxic to many animals, don't plant it where livestock browse", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "cucurbits (cucumbers", 
+    " squash", 
+    " etc.)", 
+    " raspberries and relatives", 
+    " roses", 
+    " corn"
+   ], 
+   "plant_type": "flower", 
+   "repels": [
+    "sugar ants", 
+    " Japanese beetles", 
+    " cucumber beetles", 
+    " squash bugs", 
+    " mice"
+   ], 
+   "scientific_name": "Tanacetum vulgare"
+  }, 
+  "Yarrow": {
+   "attracts": [
+    "predatory wasps", 
+    " ladybugs", 
+    " hoverflies", 
+    " Nabidae|damselbugs"
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "May increase the essential oil production of some herbs. Also improves soil quality, use the leaves to enrich compost, or as mulch.", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "many plants"
+   ], 
+   "plant_type": "flower", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Achillea millefolium"
+  }, 
+  "Zinnia": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Attracts hummingbirds that eat whitflies, attracts pollinators\n|}", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "beans", 
+    " tomatoes", 
+    " peppers"
+   ], 
+   "plant_type": "flower", 
+   "repels": [
+    "whiteflies"
+   ], 
+   "scientific_name": "Zinnia"
+  }
+ }, 
+ "her": {
+  "Borage": {
+   "attracts": [
+    "Predatory insects", 
+    " honeybees"
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Predict a square meter for its adult size. Borage is the magic bullet of companion plants{{Citation needed|date=June 2011}}", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "Almost everything", 
+    " especially strawberry", 
+    " cucurbits (cucumber", 
+    " gourds)", 
+    " tomatoes and cabbage"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    "many pests"
+   ], 
+   "scientific_name": "Borago officinalis"
+  }, 
+  "Caraway": {
+   "attracts": [
+    "Parasitic wasps", 
+    " parasitic flies"
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "Strawberries"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Carum carvi"
+  }, 
+  "Chervil": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "radish"
+   ], 
+   "comment": "loves shade, fortunately it grows well with shade-tolerant food plants; will make radishes grown near it taste spicier", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "Radish", 
+    " lettuce", 
+    " broccoli"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    "aphids"
+   ], 
+   "scientific_name": "Anthriscus cerefolium"
+  }, 
+  "Chives": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "beans", 
+    " peas"
+   ], 
+   "comment": "Same companion traits as all alliums (onions, garlic, shallots, leeks, etc.)said to prevent apple scab after 3 years planting at base of apple trees", 
+   "helped_by": [
+    "carrots"
+   ], 
+   "helps": [
+    "Apples", 
+    " carrots", 
+    " tomatoes", 
+    " brassica (broccoli", 
+    " cabbage", 
+    " mustard", 
+    " etc.)", 
+    " many others"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    "cabbage worms", 
+    " carrot fly", 
+    " aphids"
+   ], 
+   "scientific_name": "Allium schoenoprasum"
+  }, 
+  "Cilantro / Coriander": {
+   "attracts": [
+    "tachinid fly"
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "", 
+   "helped_by": [
+    "beans", 
+    " peas"
+   ], 
+   "helps": [
+    "spinach"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    "aphids", 
+    " spider mites", 
+    " white flies and potato beetle"
+   ], 
+   "scientific_name": "Coriandrum sativum"
+  }, 
+  "Common sage|Sage": {
+   "attracts": [
+    "honeybees", 
+    " Large White|cabbage butterfly"
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Deters cabbage flies, repels many bean parasites", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "rosemary", 
+    " cabbage", 
+    " beans", 
+    " carrots"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    "cabbage flies", 
+    " carrot fly", 
+    " black flea beetle", 
+    " cabbage looper", 
+    " cabbage maggot"
+   ], 
+   "scientific_name": "Salvia officinalis"
+  }, 
+  "Dill": {
+   "attracts": [
+    "Tiger Swallowtail butterflies/caterpillars", 
+    " Hoverflies", 
+    " Wasps", 
+    " Tomato Horn Worms", 
+    " honeybees", 
+    " Ichneumonid Wasps"
+   ], 
+   "avoid": [
+    "carrots", 
+    " tomatoes"
+   ], 
+   "comment": "one of the few plants said to grow with fennel", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "brassica oleracea|Cabbages", 
+    " Corn", 
+    " Lettuce", 
+    " Onions", 
+    " Cucumbers"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    "Aphids", 
+    " spider mites", 
+    " squash bugs", 
+    " cabbage looper"
+   ], 
+   "scientific_name": "Anethum graveolens"
+  }, 
+  "Fennel": {
+   "attracts": [
+    "ladybugs", 
+    " syrphid fly", 
+    " tachinid fly"
+   ], 
+   "avoid": [
+    "Almost everything"
+   ], 
+   "comment": "Fennel is allelopathic to most garden plants, inhibiting growth, causing to bolt, or actually killing many plants", 
+   "helped_by": [
+    "Dill"
+   ], 
+   "helps": [
+    "Dill"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    "aphids"
+   ], 
+   "scientific_name": "Foeniculum vulgare"
+  }, 
+  "Garlic": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "Beans", 
+    " cabbages", 
+    " peas"
+   ], 
+   "comment": "Deters rabbits, same companion traits as all alliums (onions, chives, shallots, leeks, etc.)", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "Apple trees", 
+    " Pear trees", 
+    " Roses", 
+    " Cucumbers", 
+    " Lettuce", 
+    " Celery"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    "Aphids", 
+    " cabbage looper", 
+    " ants", 
+    " rabbits", 
+    " cabbage maggot"
+   ], 
+   "scientific_name": "Allium sativum"
+  }, 
+  "German Chamomile|Chamomile": {
+   "attracts": [
+    "Hoverflies", 
+    " wasps"
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Growing near herbs will increase their oil production.", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "Basil", 
+    " Wheat", 
+    " Onion", 
+    " Cabbage", 
+    " Cucumber"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Matricaria recutita"
+  }, 
+  "Hemp": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Repels many types of beetles which attack cabbages.", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "Brassica (cabbage", 
+    " brussels sprouts", 
+    " other kales)"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Cannabis sativa L. subsp. sativa"
+  }, 
+  "Hyssop": {
+   "attracts": [
+    "honeybees", 
+    " butterflies"
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Stimulates growth of grapes.", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "Cabbage", 
+    " grapes"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    "Cabbage moth larvae", 
+    " Large White|Cabbage Butterflies"
+   ], 
+   "scientific_name": "Hyssopus officinalis"
+  }, 
+  "Lovage": {
+   "attracts": [
+    "Ichneumonid Wasps", 
+    " ground beetles (good)"
+   ], 
+   "avoid": [
+    "rhubarb"
+   ], 
+   "comment": "Is thought to improve the health of almost all plants, like borage and geraniums, is considered a \"magic bullet\" of companion planting", 
+   "helped_by": [
+    "beans"
+   ], 
+   "helps": [
+    "Almost all plants"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Levisticum officinale"
+  }, 
+  "Oregano": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "provides ground cover and much-needed humidity for pepper plants if allowed to spread among them", 
+   "helped_by": [
+    "basil"
+   ], 
+   "helps": [
+    "Tomatoes", 
+    " peppers", 
+    " many other plants"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    "aphids"
+   ], 
+   "scientific_name": "Origanum vulgare"
+  }, 
+  "Parsley": {
+   "attracts": [
+    "Swallowtail Butterflies", 
+    " wasps", 
+    " flies"
+   ], 
+   "avoid": [
+    "Alliums", 
+    " lettuce"
+   ], 
+   "comment": "Sacrificially attracts insects that predate upon tomatoes", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "Asparagus", 
+    " corn/maize", 
+    " tomatoes"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Petroselinum Crispum"
+  }, 
+  "Peppermint": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Repels cabbage flies, has same general companion properties as other mints", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "Brassica (cabbage", 
+    " kholrabi", 
+    " broccoli", 
+    " and the other kales)"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    "cabbage fly", 
+    " ants", 
+    " cabbage looper"
+   ], 
+   "scientific_name": "Mentha piperita"
+  }, 
+  "Rosemary": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "basil"
+   ], 
+   "comment": "Deters cabbage flies, repels many bean parasites", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "Common sage|sage", 
+    " cabbage", 
+    " beans", 
+    " carrots"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    "bean beetle"
+   ], 
+   "scientific_name": "Rosmarinus officinalis"
+  }, 
+  "Savory (herb)|Summer Savoury": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "also delays germination of certain foul herbs", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "Green beans", 
+    " onions", 
+    ""
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Satureja hortensis"
+  }, 
+  "Spearmint": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Controls ants and aphids, has same general companion properties as other mints.", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    ""
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    "ants", 
+    " aphids"
+   ], 
+   "scientific_name": "Mentha spicata"
+  }, 
+  "Tansy": {
+   "attracts": [
+    "honeybees"
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Is reputed to generally repel insects (except for nectar-eating types). This herb should not be consumed, as it is quite toxic.", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "beans", 
+    " cucurbits (cucumbers", 
+    " squash", 
+    " etc.)", 
+    " corn", 
+    " roses"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    "flying insects(Ichneumonid Wasps)", 
+    " Japanese beetles", 
+    " striped cucumber beetles", 
+    " squash bugs and ants"
+   ], 
+   "scientific_name": "Tanacetum vulgare"
+  }, 
+  "Tarragon": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Its scent is disliked by most pests, and this plant is also thought to have Nurse Plant properties, enhancing the growth and flavor of crops grown with it.", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "Everything", 
+    " but especially eggplant"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Artemisia dracunculus"
+  }, 
+  "Thyme": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Deters white fly\n|}", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "Cabbage and broccoli"
+   ], 
+   "plant_type": "herbs", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": ""
+  }
+ }, 
+ "veg": {
+  "Alliums": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "beans", 
+    " peas", 
+    " parsley"
+   ], 
+   "comment": "'''Alliums include onions, garlic, leeks, shallots, chives, and others'''", 
+   "helped_by": [
+    "carrots"
+   ], 
+   "helps": [
+    "fruit trees", 
+    " nightshades (tomatoes", 
+    " capsicum peppers", 
+    " potatoes)", 
+    " brassicas (cabbage", 
+    " broccoli", 
+    " kohlrabi", 
+    " etc.) carrots"
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    "slugs", 
+    " aphids", 
+    " carrot fly", 
+    " cabbage worms[http://www.warren-wilson.edu/~research/Undergrad_Res/nss97-98/fall1997abs.html nss abstracts]"
+   ], 
+   "scientific_name": "Allium"
+  }, 
+  "Asparagus": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "Onion", 
+    " Garlic", 
+    " Potatoes"
+   ], 
+   "comment": "Marigolds will deter beetles.", 
+   "helped_by": [
+    "Aster Family flowers", 
+    " Dill", 
+    " Coriander", 
+    " Tomatoes", 
+    " Parsley", 
+    " Basil", 
+    " Comfrey", 
+    " Marigolds"
+   ], 
+   "helps": [
+    "Tomatoes[http://counties.cce.cornell.edu/chemung/agriculture/publications/companion-planting.pdf Companion Planting]"
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Asparagus officinalis"
+  }, 
+  "Beans": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "Tomatoes", 
+    " chili peppers", 
+    " alliums (onions", 
+    " garlic", 
+    " etc.)", 
+    " brassicas (cabbage", 
+    " broccoli", 
+    " etc.)"
+   ], 
+   "comment": "Hosts nitrogen-fixing bacteria, a good fertilizer for ''some'' plants, too much for others", 
+   "helped_by": [
+    "Eggplant", 
+    " Summer savory"
+   ], 
+   "helps": [
+    "Corn (see Three Sisters (agriculture)|Three Sisters)", 
+    " Spinach", 
+    " lettuce", 
+    " rosemary", 
+    " summer savory", 
+    " dill", 
+    " carrots", 
+    " brassicas", 
+    " beets", 
+    " radish", 
+    " strawberry and cucumbers"
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    "California beetles"
+   ], 
+   "scientific_name": "Phaseolus"
+  }, 
+  "Beets": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "Runner or pole beans"
+   ], 
+   "comment": "Good for adding minerals to the soil through composting leaves which have up to 25% magnesium. Runner or pole beans and beets stunt each other's growth.", 
+   "helped_by": [
+    "Catnip", 
+    " Garlic", 
+    " Mint"
+   ], 
+   "helps": [
+    "lettuce", 
+    " kohlrabi", 
+    " onions and brassicas"
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Beta Vulgaris"
+  }, 
+  "Brassicas": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "mustards", 
+    " nightshades (tomatoes", 
+    " peppers", 
+    " etc.)"
+   ], 
+   "comment": "'''Brassicas are a family of species which include broccoli, cabbage, brussels sprouts, kohlrabi, and cauliflower.'''", 
+   "helped_by": [
+    "geraniums", 
+    " dill", 
+    " alliums (onions", 
+    " shallots", 
+    " garlic", 
+    " etc.)", 
+    " rosemary", 
+    " nasturtium", 
+    " borage"
+   ], 
+   "helps": [
+    "potatoes", 
+    " cereals (e.g. corn", 
+    " wheat)"
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    "wireworms"
+   ], 
+   "scientific_name": "Brassica"
+  }, 
+  "Broccoli": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "mustards", 
+    " Tomatoes", 
+    " peppers"
+   ], 
+   "comment": "Rosemary repels cabbage fly, geraniums trap cabbage worms, same general companion profile as all brassica (cabbage, kohlrabi, brussels sprouts, cauliflower, etc.)", 
+   "helped_by": [
+    "geraniums", 
+    " dill", 
+    " alliums", 
+    " rosemary", 
+    " nasturtium", 
+    " borage"
+   ], 
+   "helps": [
+    ""
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Brassica oleracea"
+  }, 
+  "Cabbage": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "mustards", 
+    " Tomatoes", 
+    " peppers strawberries", 
+    " and pole/runner beans"
+   ], 
+   "comment": "Rosemary repels cabbage flies, geraniums trap cabbage worms, same general companion profile as all brassica (cabbage, kohlrabi, brussels sprouts, cauliflower, etc.)", 
+   "helped_by": [
+    "geraniums", 
+    " dill", 
+    " alliums", 
+    " rosemary"
+   ], 
+   "helps": [
+    ""
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Brassica oleracea"
+  }, 
+  "Carrots": {
+   "attracts": [
+    "assassin bug", 
+    " lacewing", 
+    " parasitic wasp", 
+    " yellow jacket and other predatory wasps"
+   ], 
+   "avoid": [
+    "Dill", 
+    " parsnip", 
+    " radish"
+   ], 
+   "comment": "Tomatoes grow better with carrots, but may stunt the carrots' growth. Beans (which are bad for tomatoes) provide the nitrogen carrots need more than some other vegetables. Aromatic companion plants repel carrot fly. Sage, rosemary, and radishes are recommended by ''some'' as companion plants, but listed by others as incompatible. Alliums inter-planted with carrots confuse onion and carrot flies. For the beneficial insect-attracting properties of carrots to work, they need to be allowed to flower; Otherwise, use the wild carrot, Queen Anne's Lace, for the same effect. Flax produces an oil that may protect root vegetables like carrots from some pests.", 
+   "helped_by": [
+    "alliums (leeks", 
+    " shallots", 
+    " etc.)", 
+    " rosemary", 
+    " wormwood", 
+    " sage", 
+    " beans", 
+    " flax"
+   ], 
+   "helps": [
+    "Tomatoes", 
+    " Alliums (onions", 
+    " chives", 
+    " etc.)", 
+    " lettuce"
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "wild carrot|Daucus carota"
+  }, 
+  "Celery": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "corn", 
+    " Aster flowers", 
+    " these can transmit the aster yellows disease"
+   ], 
+   "comment": "", 
+   "helped_by": [
+    "Cosmos", 
+    " Daisies", 
+    " Snapdragons"
+   ], 
+   "helps": [
+    ""
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Apium graveolens"
+  }, 
+  "Chili pepper|Peppers": {
+   "attracts": [
+    "Tomato Horn worm"
+   ], 
+   "avoid": [
+    "beans", 
+    " kale (cabbage", 
+    " brussels sprouts", 
+    " etc.)"
+   ], 
+   "comment": "Pepper plants like high humidity, which can be helped along by planting with some kind of dense-leaf or ground-cover companion, like marjoram and basil; they also need direct sunlight, but their fruit can be harmed by it...pepper plants grown together, or with tomatoes, can shelter the fruit from sunlight, and raises the humidity level.", 
+   "helped_by": [
+    "tomatoes", 
+    " geraniums", 
+    " petunias"
+   ], 
+   "helps": [
+    "themselves", 
+    " marjoram"
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Solanaceae, Capsicum"
+  }, 
+  "Cucumber": {
+   "attracts": [
+    "Beneficial for ground beetles"
+   ], 
+   "avoid": [
+    "Tomato", 
+    " Sage"
+   ], 
+   "comment": "", 
+   "helped_by": [
+    "Nasturtiums", 
+    " radishes", 
+    " marigolds", 
+    " sunflowers", 
+    " peas", 
+    " beets", 
+    " carrots", 
+    " and Dill"
+   ], 
+   "helps": [
+    ""
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Cucumis Sativus"
+  }, 
+  "Eggplant or Aubergine": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Marigolds will deter nematodes.", 
+   "helped_by": [
+    "Marigolds", 
+    " tarragon", 
+    " mints"
+   ], 
+   "helps": [
+    "Beans", 
+    " Peppers"
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Solanum melongena"
+  }, 
+  "Leek": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "Legumes (beans", 
+    " peas", 
+    " etc.)", 
+    " Swiss chard"
+   ], 
+   "comment": "Same companion traits as all alliums (onions, garlic, shallots, chives, etc.)", 
+   "helped_by": [
+    "carrots"
+   ], 
+   "helps": [
+    "Celery", 
+    " apple trees"
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    "cabbage worms", 
+    " aphids", 
+    " carrot fly", 
+    " others"
+   ], 
+   "scientific_name": "Leek|Allium ampeloprasum v. porrum"
+  }, 
+  "Lettuce": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "celery", 
+    " cabbage", 
+    " cress", 
+    " parsley"
+   ], 
+   "comment": "Mints (including hyssop, sage, and various \"balms\") repel slugs, a bane of lettuce and cabbages", 
+   "helped_by": [
+    "Radish", 
+    " Kohlrabi", 
+    " beans", 
+    " carrots"
+   ], 
+   "helps": [
+    ""
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Lactuca sativa"
+  }, 
+  "Maize|Corn / Maize": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "Tomato", 
+    " Celery"
+   ], 
+   "comment": "Provides beans with a trellis, is protected from predators and dryness by cucurbits, in the Three Sisters (agriculture)|three sisters technique", 
+   "helped_by": [
+    "Sunflowers", 
+    " legumes (beans", 
+    " peas", 
+    " soybeans etc.)", 
+    " peanuts", 
+    " cucurbits (squash", 
+    " cucumbers", 
+    " melons", 
+    " etc.)", 
+    " amaranth", 
+    " white geranium", 
+    " lamb's quarters", 
+    " morning glory", 
+    " parsley", 
+    " and potato"
+   ], 
+   "helps": [
+    "beans"
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Zea mays"
+  }, 
+  "Mustard plant|Mustard": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Same general companion profile as all brassica (cabbage, kohlrabi, brussels sprouts, cauliflower, etc.)", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "Cabbage", 
+    " cauliflower", 
+    " radish", 
+    " brussels sprouts", 
+    " turnips"
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    "various pests"
+   ], 
+   "scientific_name": "Brassicaceae, Sinapis alba"
+  }, 
+  "Nightshades": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "beans", 
+    " black walnuts", 
+    " corn", 
+    " fennel", 
+    " dill", 
+    " brassica (broccoli", 
+    " cabbage", 
+    " cauliflower", 
+    " etc.)"
+   ], 
+   "comment": "'''Nightshade plants include tomatoes, tobacco, chili peppers (including bell peppers), potatoes, eggplant, and others'''", 
+   "helped_by": [
+    "carrots", 
+    " alliums", 
+    " mints (basil", 
+    " oregano", 
+    " etc.)"
+   ], 
+   "helps": [
+    ""
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Solanaceae"
+  }, 
+  "Onion": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "Beans", 
+    " lentils", 
+    " peas", 
+    " parsley"
+   ], 
+   "comment": "Same companion traits as all other alliums (chives, garlic, shallots, leeks, etc.)", 
+   "helped_by": [
+    "Carrots"
+   ], 
+   "helps": [
+    "Tomatoes", 
+    " brassicas (broccoli", 
+    " cabbage", 
+    " etc.)"
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    "aphids", 
+    " carrot fly", 
+    " other pests"
+   ], 
+   "scientific_name": "Allium cepa"
+  }, 
+  "Parsnip": {
+   "attracts": [
+    "a variety of predatory insects"
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "''The flowers of the parsnip plant left to seed will attract a variety of predatory insects to the garden, they are particularly helpful when left under fruit trees, the predators attacking codling moth and light brown apple moth. The root also contains Myristricin, which is toxic to fuit flies, house flies, red spider mite, pea aphids, an simple blender made extraction of three blended parsnips roots to one litre of water through a food processor (not one for preparing food) and left overnight, strained and use within a few days.''", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "fruit trees"
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Pastinaca Sativa"
+  }, 
+  "Potato": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    "Atriplex", 
+    " carrot", 
+    " cucumber", 
+    " oignon", 
+    " raspberries", 
+    " squash", 
+    " sunflower", 
+    " tomato"
+   ], 
+   "comment": "Horseradish increases the disease resistance of potatoes", 
+   "helped_by": [
+    "Horseradish"
+   ], 
+   "helps": [
+    ""
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Solanum tuberosum"
+  }, 
+  "Pumpkin and other Squash (plant)|Squash": {
+   "attracts": [
+    "Spiders", 
+    " Ground Beetles"
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Radishes can be used as a trap crop against flea beetles, Curcurbita can be used in the Three Sisters (agriculture)|three sisters technique", 
+   "helped_by": [
+    "Buckwheat", 
+    " catnip", 
+    " tansy", 
+    " radishes"
+   ], 
+   "helps": [
+    "corn", 
+    " beans"
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Curcurbita spp"
+  }, 
+  "Radish": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "Radishes can be used as a trap crop against flea beetles", 
+   "helped_by": [
+    ""
+   ], 
+   "helps": [
+    "squash", 
+    " eggplant", 
+    " cucumber", 
+    " lettuce"
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    "flea beetles", 
+    " cucumber beetles"
+   ], 
+   "scientific_name": "Rafanus Sativus"
+  }, 
+  "Spinach": {
+   "attracts": [
+    ""
+   ], 
+   "avoid": [
+    ""
+   ], 
+   "comment": "The peas and beans provide natural shade for the spinach", 
+   "helped_by": [
+    "Peas", 
+    " Beans"
+   ], 
+   "helps": [
+    ""
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    ""
+   ], 
+   "scientific_name": "Spinacia oleracea"
+  }, 
+  "Tomatoes": {
+   "attracts": [
+    "Tomato Hornworm"
+   ], 
+   "avoid": [
+    "Black walnut", 
+    " corn", 
+    " fennel", 
+    " peas", 
+    " dill", 
+    " potatoes", 
+    " beetroot", 
+    " brassicas (kohlrabi", 
+    " cabbage", 
+    " etc.)", 
+    " rosemary"
+   ], 
+   "comment": "Black walnuts inhibit tomato growth, in fact they are negative allelopathic  to all other nightshade plants (chili pepper, potato, tobacco, petunia) as well, because it produces a chemical called juglone. Dill attracts tomato horn worm.Growing tomatoes with Basil does not appear to enhance tomato flavor but studies have shown that growing them around 10 inches apart can increase the yield of tomatoes by about 20%.\n|}", 
+   "helped_by": [
+    "basil{{cite web|last=Bomford|first=Michael|title=Yield", 
+    " pest density", 
+    " and tomato flavor effects of companion planting in garden-scale studies incorporating tomato", 
+    " basil", 
+    " and Brussels sprout.|url=http://orgprints.org/6614/|publisher=Organic eprints|accessdate=5/2/2012}}", 
+    " oregano", 
+    " parsley", 
+    " carrots", 
+    " marigold", 
+    " Alliums", 
+    " celery", 
+    " Geraniums", 
+    " Petunias", 
+    " Nasturtium", 
+    " Borage", 
+    " any type of onion or chives"
+   ], 
+   "helps": [
+    "roses", 
+    " peppers", 
+    " asparagus"
+   ], 
+   "plant_type": "veggie", 
+   "repels": [
+    "asparagus beetle"
+   ], 
+   "scientific_name": "Solanum lycopersicum"
+  }
+ }
+}
