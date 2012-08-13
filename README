@@ -21,5 +21,4 @@ to run virutalenv
 $source env/bin/activate
 
 to create new DB
->>> import model
->>> model.db.create_all()
+-run creatdbs.py
