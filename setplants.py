@@ -4,8 +4,6 @@ from grid import generate_squares, generate_peers
 
 def create_grid(squares, picked_plants):
     """Convert grid to a dict of possible values {square:[avaliable plants]}"""
-    # To start, every square can be any plant,
-    # then assign values from the grid, if any. (add feature later)
     return dict((s, picked_plants) for s in squares)
 
 # Add this feature later
