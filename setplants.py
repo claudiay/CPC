@@ -2,16 +2,15 @@
 # Returns a dictionary of plant placement on the graph.
 from grid import generate_squares, generate_peers
 
-def parse_grid(squares, picked_plants):
+def create_grid(squares, picked_plants):
     """Convert grid to a dict of possible values {square:[avaliable plants]}"""
     # To start, every square can be any plant,
     # then assign values from the grid, if any. (add feature later)
     return dict((s, picked_plants) for s in squares)
 
+# Add this feature later
 def prepicked_values(grid, squares):
     """Convert grid into a dict of {square:char} with "." for empty."""
-    # This is needed for the added feature in parse_grid.
-    # Not currently in use.
     pass
 
 def assign(values, square, plant):
@@ -42,21 +41,22 @@ def square_benefit(values, plant, square, guide, peers):
 	        score = score - 1
     return score
 
-def solve(guide, squares, picked_plants, peers):
-    values = parse_grid(squares, picked_plants)
+def solve(guide, picked_plants, width, length):
+    peers = generate_peers(width, length)
+    squares = generate_squares(width, length)
+    values = create_grid(squares, picked_plants)
     if all(len(values[s]) == 1 for s in squares):
         return values # Fin!
     for square in values:
+        # Find max beneficial plant for each square.
         benefit, picked = max((square_benefit(values, p, square, guide, peers), p) 
-		for p in picked_plants)
+		for p in values[square])
 	print "for %s, place %s, with benefit: %s" %(square, picked, benefit)
 	assign(values, square, picked)
     return values
 
 
 def main():
-    peers = generate_peers(3,3)
-    squares = generate_squares(3,3)
     picked_plants = ['corn1', 'corn2', 'tomato1', 'tomato2', 'tomato3', 
     		     'strawberry1', 'strawberry2', 'strawberry3', 'potato1']
     guide = {'corn': 
@@ -68,7 +68,7 @@ def main():
 	     'potato':
 	     	{'friend':[], 'avoid':['corn']}
 	    }
-    print solve(guide, squares, picked_plants, peers)
+    print solve(guide, picked_plants, 3, 3)
 
 
 
