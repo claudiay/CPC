@@ -58,5 +58,16 @@ def create_plot():
     return render_template('/plots.html', squares=squares, plot_width=plot_width,
     			plant_width=plant_width)
 
+# Returns Optimal Garden layout
+@app.route('/fin')
+def show_plot():
+    picked_plants = 0
+    guide = {} 
+    for plant in picked_plants:
+        # request info from database and add to guide
+	guide[plant] = "info"
+    # run setplants.py and return as garden_layout
+    return True # Return garden_layout hash table
+
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")

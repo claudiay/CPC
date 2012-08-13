@@ -28,6 +28,7 @@ def assign(values, square, plant):
 def square_benefit(values, plant, square, guide, peers):
     """Returns benefit of placing the plant in that square."""
     score = 0
+    plant = plant[:-1]
     square_peers = peers[square]
 
     # Check benefit/cost for assigned squares.
@@ -41,13 +42,17 @@ def square_benefit(values, plant, square, guide, peers):
 	        score = score - 1
     return score
 
-def keep_assigning(values):
-    """Checks to see if all plants are set."""
-    for plot in values:
-    	if len(values[plot]) > 1:
-	    return True
-	else:
-	    return False
+def solve(guide, squares, picked_plants, peers):
+    values = parse_grid(squares, picked_plants)
+    if all(len(values[s]) == 1 for s in squares):
+        return values # Fin!
+    for square in values:
+        benefit, picked = max((square_benefit(values, p, square, guide, peers), p) 
+		for p in picked_plants)
+	print "for %s, place %s, with benefit: %s" %(square, picked, benefit)
+	assign(values, square, picked)
+    return values
+
 
 def main():
     peers = generate_peers(3,3)
@@ -55,20 +60,16 @@ def main():
     picked_plants = ['corn1', 'corn2', 'tomato1', 'tomato2', 'tomato3', 
     		     'strawberry1', 'strawberry2', 'strawberry3', 'potato1']
     guide = {'corn': 
-    		{'friend':['tomato'], 'avoid':['potato', 'corn']},
+    		{'friend':['tomato'], 'avoid':['potato']},
     	     'tomato':
-	     	{'friend':['strawberry'], 'avoid':['potato', 'tomato']},
+	     	{'friend':['strawberry'], 'avoid':['potato']},
 	     'strawberry':
-	     	{'friend':['tomato'], 'avoid':['strawberry']},
+	     	{'friend':['tomato'], 'avoid':[]},
 	     'potato':
-	     	{'friend':[], 'avoid':['corn', 'potato']}
+	     	{'friend':[], 'avoid':['corn']}
 	    }
-    values = parse_grid(squares, picked_plants)
-    assign(values, "A1", "strawberry1")
-    assign(values, "A3", "strawberry2")
-    assign(values, "B2", "potato1")
-    print square_benefit(values, "tomato", "A2", guide, peers)
- 
+    print solve(guide, squares, picked_plants, peers)
+
 
 
 if __name__ == '__main__':
