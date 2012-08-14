@@ -7,11 +7,9 @@
 # Structure #
 #############
 index.html
--start page
-plots.html
 -collects state, city, season, plot size, and list of plants
-swap.html
--allows user to pre-place plants
+select_plants.html
+-user selects plants from a list of avaliable plants
 generate.html
 -returns the generated optimal plan
 
@@ -22,3 +20,8 @@ $source env/bin/activate
 
 to create new DB
 -run creatdbs.py
+
+things to add:
+-allow users to pre-place plants
+-find region and restrict plants to the season
+-pdf print out
