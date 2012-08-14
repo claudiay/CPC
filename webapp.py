@@ -64,15 +64,23 @@ def create_plot():
 @app.route('/fin', methods=['POST'])
 def show_plot():
     plant_count = json.loads(request.form.get('plant_counts'))
-    plant_list = []
+    length = int(json.loads(request.form.get('plot_length')))
+    print length
+    width = int(json.loads(request.form.get('plot_width')))
+    print width
+    guide = {}
     picked_plants = []
     for key in plant_count:
         if plant_count[key] > 0:
             print plant_count[key]
             for i in range(plant_count[key]):
-                plant_name = db.session.query(Plants).get(int(key)).common_name
-                picked_plants.append(plant_name+str(i))
-    return render_template('/fin.html', plant_list=picked_plants)
+                plant = db.session.query(Plants).get(int(key))
+                picked_plants.append(plant.common_name+str(i))
+                guide[plant.common_name] = {'friend':plant.helped_by,
+                                            'avoid':plant.avoid}
+    solved, benefits = setplants.solve(guide, picked_plants,
+                                        width, length)
+    return render_template('/fin.html', solved=solved, benefits=benefits)
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")

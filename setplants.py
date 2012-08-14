@@ -50,15 +50,19 @@ def solve(guide, picked_plants, width, length):
     peers = generate_peers(width, length)
     squares = generate_squares(width, length)
     values = create_grid(squares, picked_plants)
+    benefits = {}
     if all(len(values[s]) == 1 for s in squares):
         return values # Fin!
     for square in values:
         # Find max beneficial plant for each square.
         benefit, picked = max((square_benefit(values, p, square, guide, peers), p) 
 		for p in values[square])
-	print "for %s, place %s, with benefit: %s" %(square, picked, benefit)
-	assign(values, square, picked)
-    return values
+        print "for %s, place %s, with benefit: %s" %(square, picked, benefit)
+        assign(values, square, picked)
+    for square in values:
+        plant = values[square][0]
+        benefits[square] = square_benefit(values, plant, square, guide, peers)   
+    return values,benefits
 
 
 def main():
