@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 from flask import Flask, jsonify, redirect, url_for, render_template, request, g
-import setplants
+import setplants, json
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import distinct
 from grid import generate_squares
 from model import Location, Plants, db
-import json
 
 app = Flask(__name__)
 
@@ -80,7 +79,9 @@ def show_plot():
                                             'avoid':plant.avoid}
     solved, benefits = setplants.solve(guide, picked_plants,
                                         width, length)
-    return render_template('/fin.html', solved=solved, benefits=benefits)
+    order = generate_squares(width, length)
+    return render_template('/fin.html', order=order,
+            solved=solved, benefits=benefits)
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
