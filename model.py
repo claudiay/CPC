@@ -63,4 +63,3 @@ class Location(db.Model):
 	self.longitude = longitude
 	self.city = city
 	self.state = state
-
