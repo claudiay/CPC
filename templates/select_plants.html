@@ -58,6 +58,8 @@
 
         <form action="{{ url_for("show_plot") }}" method="POST">
             <input type="hidden" name="plant_counts" id="plant-counts"></input>
+            <input type="hidden" name="plot_width" id="plot-width"></input>
+            <input type="hidden" name="plot_length" id="plot-length"></input>
         </form>
         
 </body>
@@ -103,8 +105,9 @@ var decrease = function(evt) {
 
 var fin = function(evt) {
         $("input#plant-counts").val(JSON.stringify(plant_counts));
+        $("input#plot-width").val(JSON.stringify(plot_width));
+        $("input#plot-length").val(JSON.stringify(plot_length));
         $("form").submit();
-//	$.post('/fin', JSON.stringify(plant_counts));
 	return false;
 };
 
