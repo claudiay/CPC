@@ -18,6 +18,7 @@
 	<div id="count" value="{{side}}">
 		<h3>Total Squares: {{ width * length }}</h3>
                 <h3 id="total-picked">Total Picked: <span>0</span></h3>
+		<a href="/fin" id="done">DONE!</a>
 	</div>
 	<div id="plantslist">
 	<div id="right">	
@@ -54,6 +55,11 @@
 	</div>
 	</div>
 	</div>
+
+        <form action="{{ url_for("show_plot") }}" method="POST">
+            <input type="hidden" name="plant_counts" id="plant-counts"></input>
+        </form>
+        
 </body>
 
 <script type="text/javascript">
@@ -61,6 +67,7 @@ var plot_width = {{ width }};
 var plot_length = {{ length }};
 var plants  = {{ g.json.dumps(plant_list) | safe}};
 var num_plants = 0;
+var max_size = plot_width * plot_length; 
 
 var plant_counts = {};
 for (var i = 0; i < plants.length; i++) {
@@ -72,25 +79,39 @@ var increase = function(evt) {
     var span = $(this).parent();
     var raw_id = span.attr("id");
     var id = raw_id.split("-")[1];
-    plant_counts[id]++;
-    num_plants ++;
-    span.children("span").text(plant_counts[id]);
-    $("h3#total-picked span").text(num_plants);
+    if (num_plants < max_size)
+    	{plant_counts[id]++;
+    	num_plants ++;
+    	span.children("span").text(plant_counts[id]);
+	$("h3#total-picked span").text(num_plants)}
+    else
+    	{alert("Too many plants!")}
 };
 
 var decrease = function(evt) {
     var span = $(this).parent();
     var raw_id = span.attr("id");
     var id = raw_id.split("-")[1];
-    plant_counts[id]--;
     span.children("span").text(plant_counts[id]);
-    num_plants--;
-    $("h3#total-picked span").text(num_plants);
+    if (plant_counts[id] > 0) 
+	{num_plants--;
+	plant_counts[id]--;
+    	$("h3#total-picked span").text(num_plants);
+    	span.children("span").text(plant_counts[id]);
+	}
+};
+
+var fin = function(evt) {
+        $("input#plant-counts").val(JSON.stringify(plant_counts));
+        $("form").submit();
+//	$.post('/fin', JSON.stringify(plant_counts));
+	return false;
 };
 
 var main = function() {
     $("button.plus").click(increase);
     $("button.minus").click(decrease);
+    $("a#done").click(fin);
 };
 
 $(document).ready(main);

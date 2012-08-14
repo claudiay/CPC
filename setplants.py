@@ -22,20 +22,27 @@ def assign(values, square, plant):
 	    values[plot].pop(i) # removed assigned plant from list
     return values
 
+def remove_nums(word):
+    letters = []
+    for c in word:
+        if c.isdigit() == False:
+            letters.append(c)
+    return ''.join(letters)
+
 def square_benefit(values, plant, square, guide, peers):
     """Returns benefit of placing the plant in that square."""
     score = 0
-    plant = plant[:-1]
+    plant = remove_nums(plant)
     square_peers = peers[square]
-
     # Check benefit/cost for assigned squares.
     for peer in square_peers:
         if len(values[peer]) == 1: # if assigned
-	    if values[peer][0][:-1] in guide[plant]['avoid']:
+            peer_plant = remove_nums(values[peer][0])
+            if peer_plant in guide[plant]['avoid']:
 	        score = score - 5
-	    elif values[peer][0][:-1] in guide[plant]['friend']:
+	    elif peer_plant in guide[plant]['friend']:
 	        score = score + 3
-	    elif values[peer][0][:-1] == plant:
+	    elif peer_plant == plant:
 	        score = score - 1
     return score
 
@@ -55,7 +62,7 @@ def solve(guide, picked_plants, width, length):
 
 
 def main():
-    picked_plants = ['corn1', 'corn2', 'tomato1', 'tomato2', 'tomato3', 
+    picked_plants = ['corn231', 'corn2', 'tomato1', 'tomato2', 'tomato3', 
     		     'strawberry1', 'strawberry2', 'strawberry3', 'potato1']
     guide = {'corn': 
     		{'friend':['tomato'], 'avoid':['potato']},
