@@ -104,11 +104,17 @@ var decrease = function(evt) {
 };
 
 var fin = function(evt) {
+    if (num_plants == max_size) {
         $("input#plant-counts").val(JSON.stringify(plant_counts));
         $("input#plot-width").val(JSON.stringify(plot_width));
         $("input#plot-length").val(JSON.stringify(plot_length));
         $("form").submit();
-	return false;
+        return false;
+    }
+    else {
+        alert("You need more plants.");
+        return false;
+    }
 };
 
 var main = function() {
