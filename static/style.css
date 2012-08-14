@@ -29,11 +29,11 @@ div#left {
 span{
 	float:right;
 }
-div#even {
+div.even {
 	background-color:#E8E8E8;
 	padding:5px;
 }
-div#odd {
+div.odd {
 	padding:5px;
 }
 a:link {text-decoration:none;}

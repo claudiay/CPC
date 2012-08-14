@@ -1,10 +1,11 @@
 #!/usr/bin/env python
-from flask import Flask, jsonify, redirect, url_for, render_template, request
+from flask import Flask, jsonify, redirect, url_for, render_template, request, g
 import setplants
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import distinct
 from grid import generate_squares
 from model import Location, Plants, db
+import json
 
 app = Flask(__name__)
 
@@ -29,12 +30,13 @@ def info():
     latitude = location.latitude
     longitude = location.longitude
     plant_list = db.session.query(Plants).all()
+    json_plants = [ plant.serialize for plant in plant_list ]
     list_len = int(len(plant_list)/2)
-    size = width * length
+    g.json = json
     return render_template('/select_plants.html', season=season,
 			width=width, length=length, state=state,
-			city=city, plant_list=plant_list,
-			list_len=list_len, size=size, longitude=longitude,
+			city=city, plant_list=json_plants,
+			list_len=list_len, longitude=longitude,
 			latitude=latitude)
 
 # Step 1.2
