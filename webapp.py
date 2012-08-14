@@ -61,15 +61,18 @@ def create_plot():
     			plant_width=plant_width)
 
 # Returns Optimal Garden layout
-@app.route('/fin')
+@app.route('/fin', methods=['POST'])
 def show_plot():
-    picked_plants = 0
-    guide = {} 
-    for plant in picked_plants:
-        # request info from database and add to guide
-	guide[plant] = "info"
-    # run setplants.py and return as garden_layout
-    return True # Return garden_layout hash table
+    plant_count = json.loads(request.form.get('plant_counts'))
+    plant_list = []
+    picked_plants = []
+    for key in plant_count:
+        if plant_count[key] > 0:
+            print plant_count[key]
+            for i in range(plant_count[key]):
+                plant_name = db.session.query(Plants).get(int(key)).common_name
+                picked_plants.append(plant_name+str(i))
+    return render_template('/fin.html', plant_list=picked_plants)
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
