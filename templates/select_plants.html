@@ -16,22 +16,22 @@
 	{{season}}:{{state}}>{{city}}>{{width}}x{{length}}<br>
 	long: {{longitude}}, lat: {{latitude}}
 	<div id="count" value="{{side}}">
-		<h3>Total Squares: {{size}}</h3>
-		<h3>Total Picked: 0</h3>
+		<h3>Total Squares: {{ width * length }}</h3>
+                <h3 id="total-picked">Total Picked: <span>0</span></h3>
 	</div>
 	<div id="plantslist">
 	<div id="right">	
 	{% for i in range(list_len,2*list_len) %}
 	{% if i % 2 == 0 %}
-	<div id="even">
+	<div class="even">
 	{% else %}
-	<div id="odd">
+	<div class="odd">
 	{% endif %}		
-	-{{plant_list[i].common_name}} 
-	<span id="choice">
-		<button>+</button>
-		 0 
-		<button>-</button>
+	-{{plant_list[i]['name']}} 
+        <span class="choice" id="counter-{{plant_list[i]['id']}}">
+		<button class="plus">+</button>
+                <span>0</span>
+		<button class="minus">-</button>
 	</span>
 	</div>	
 	{% endfor %}
@@ -39,15 +39,15 @@
 	<div id="left">
 	{% for i in range(0,list_len) %}
 	{% if i % 2 == 0 %}
-	<div id="even">
+	<div class="even">
 	{% else %}
-	<div id="odd">
+	<div class="odd">
 	{% endif %}
-	-{{plant_list[i].common_name}} 
-	<span id="choice">
-		<button>+</button>
-		 0 
-		<button>-</button>
+	-{{plant_list[i]['name']}} 
+        <span class="choice" id="counter-{{plant_list[i]['id']}}">
+            <button class="plus">+</button>
+            <span>0</span>
+            <button class="minus">-</button>
 	</span>
 	</div>
 	{% endfor %}
@@ -55,4 +55,48 @@
 	</div>
 	</div>
 </body>
+
+<script type="text/javascript">
+var plot_width = {{ width }};
+var plot_length = {{ length }};
+var plants  = {{ g.json.dumps(plant_list) | safe}};
+var num_plants = 0;
+
+var plant_counts = {};
+for (var i = 0; i < plants.length; i++) {
+    var plant = plants[i];
+    plant_counts["" + plant.id] = 0;
+}
+
+var increase = function(evt) {
+    var span = $(this).parent();
+    var raw_id = span.attr("id");
+    var id = raw_id.split("-")[1];
+    plant_counts[id]++;
+    num_plants ++;
+    span.children("span").text(plant_counts[id]);
+    $("h3#total-picked span").text(num_plants);
+};
+
+var decrease = function(evt) {
+    var span = $(this).parent();
+    var raw_id = span.attr("id");
+    var id = raw_id.split("-")[1];
+    plant_counts[id]--;
+    span.children("span").text(plant_counts[id]);
+    num_plants--;
+    $("h3#total-picked span").text(num_plants);
+};
+
+var main = function() {
+    $("button.plus").click(increase);
+    $("button.minus").click(decrease);
+};
+
+$(document).ready(main);
+
+</script>
+
+
+
 </html>
