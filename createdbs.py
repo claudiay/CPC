@@ -1,8 +1,17 @@
 """
 This program creates new databases for all tables included in model.py.
 """
-import json, model, statesdata, grabwikidata
-from model import Plants
+import json, model
+from model import Plants, Location
+
+def upload_locations(file):
+    f = open(file)
+    for line in f:
+        l = line.strip().replace(' " ', "").replace(' "', "").replace('"', "").split(",")
+        print l
+        location = Location(*l)
+        model.add(location)
+        model.save_all()
 
 def upload_plants(plant_data_file):
     # Grab the json string from data.txt
@@ -38,7 +47,7 @@ def main():
     run = check()
     if run == True:
         model.db.create_all()
-	statesdata.upload_locations("plantdata/zips.csv")
+	upload_locations("plantdata/zips.csv")
 	upload_plants('plantdata/data.txt')
 
 
