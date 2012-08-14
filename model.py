@@ -38,6 +38,13 @@ class Plants(db.Model):
 	self.avoid = json.dumps(avoid)
 	self.comment = comment
 
+    @property
+    def serialize(self):
+        return {'id': self.id,
+                'name': self.common_name,
+                'science': self.scientific_name,
+                }
+
 # "zip code", "state abbreviation", "latitude", "longitude", "city", "state"
 class Location(db.Model):
     id = db.Column(db.Integer, primary_key = True)
