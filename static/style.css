@@ -46,47 +46,33 @@ a:active {
 	text-decoration:none;
 	background-color:#B8B8B8;
 }
-div#plantslist {
-	padding:20px;
-}
-
 ul { 
 		margin:0px; 
 		padding:0px; 
-		margin-left:20px; 
-}
-#list2 { 
-		width:{{plot_width}}px; 
+		margin-left:20px;
 		list-style-type:none; 
-		margin:0px;
 }
-#list1 {
-		width:{{plant_width}}px;
-		list-style-type:none;
-		margin:0px;
+
+#list li {
+	font-size:10px;
+	padding:20px;
+	float:left;
+	padding:5px; 
+	width:50px; 
+	height:50px;
 }
-#list1 li, #list2 li { 
-		float:left;
-		padding:5px; 
-		width:50px; 
-		height:50px; 
+.placeHolder div { 
+		background-color:white !important; 
+		border:dashed 1px gray !important;
+		width:50px; height:50px; 
 }
-#list1 div, #list2 div { 
+div#plots {
+		border:1px solid #000;
+}
+
+#list div, { 
 		width:50px; height:50px; 
 		border:solid 1px black; 
 		background-color:#E0E0E0; 
 		text-align:center; 
-		padding-top:0px; 
-}
-.placeHolder div { 
-		background-color:white !important; 
-		border:dashed 1px gray !important; 
-}
-div#plots {
-		border:1px solid #000;
-		width: 49%;
-}
-div#plants {
-		border:1px solid #FFF;
-		width: 49%;
-}
+		padding-top:0px;
