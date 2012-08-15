@@ -16,33 +16,19 @@ def save_all():
 # attracts, repels, avoid, comment
 class Plants(db.Model):
     id = db.Column(db.Integer, primary_key = True)
-    common_name = db.Column(db.String(50), nullable = False)
-    plant_type = db.Column(db.String(10), nullable = False)
-    scientific_name = db.Column(db.String(50), nullable = True)
-    helps = db.Column(db.String(500), nullable=True)
-    helped_by = db.Column(db.String(500), nullable=True)
-    attracts = db.Column(db.String(500), nullable=True)
-    repels = db.Column(db.String(500), nullable=True)
+    name = db.Column(db.String(50), nullable = False)
+    friend = db.Column(db.String(500), nullable=True)
     avoid = db.Column(db.String(500), nullable=True)
-    comment = db.Column(db.String(700), nullable=True)
 
-    def __init__(self, common_name, plant_type, scientific_name, helps,
-       		helped_by, attracts, repels, avoid, comment):
-	self.common_name = common_name
-	self.plant_type = plant_type
-	self.scientific_name = scientific_name
-	self.helps = json.dumps(helps)
-	self.helped_by = json.dumps(helped_by)
-	self.attracts = json.dumps(attracts)
-	self.repels = json.dumps(repels)
+    def __init__(self, name, friend, avoid):
+	self.name = name
+	self.friend = json.dumps(friend)
 	self.avoid = json.dumps(avoid)
-	self.comment = comment
 
     @property
     def serialize(self):
         return {'id': self.id,
-                'name': self.common_name,
-                'science': self.scientific_name,
+                'name': self.name,
                 }
 
 # "zip code", "state abbreviation", "latitude", "longitude", "city", "state"

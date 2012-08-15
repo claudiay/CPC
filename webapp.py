@@ -64,9 +64,7 @@ def create_plot():
 def show_plot():
     plant_count = json.loads(request.form.get('plant_counts'))
     length = int(json.loads(request.form.get('plot_length')))
-    print length
     width = int(json.loads(request.form.get('plot_width')))
-    print width
     guide = {}
     picked_plants = []
     for key in plant_count:
@@ -74,8 +72,8 @@ def show_plot():
             print plant_count[key]
             for i in range(plant_count[key]):
                 plant = db.session.query(Plants).get(int(key))
-                picked_plants.append(plant.common_name+str(i))
-                guide[plant.common_name] = {'friend':plant.helped_by,
+                picked_plants.append(plant.name+str(i))
+                guide[plant.name] = {'friend':plant.friend,
                                             'avoid':plant.avoid}
     solved, benefits = setplants.solve(guide, picked_plants,
                                         width, length)
