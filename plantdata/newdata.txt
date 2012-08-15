@@ -1,0 +1,33 @@
+Apricot|Basil,Marigold,Garlic,Nasturtium,Spinach,Stinging Nettle,Sunflower,Yarrow|Tomato
+Asparagus|Basil,Marjoram,Parsley,Tomato|None
+Basil|Apricot,Asparagus,Chives,Cucumber,Fennel,Tomato|Rue,Silverbeet 
+Beans|Broccoli,Brussell Sprouts,Cabbages,Carrots,Cauliflower,Corn,Cucumber,Marigold,Grape Vine,Lettuce,Marjoram,Parsley,Peas,Potatoes,Rosemary,Sage,Savory|Chives,Fennel,Garlic,Onions
+Broad Beans|Broccoli,Brussell Sprouts,Cabbages,Cauliflower,Corn,Lettuce,Marjoram,Potatoes,Spinach|Chives,Fennel,Garlic,Onions
+Bush Beans|Beets,Broccoli,Brussell Sprouts,Cabbages,Cauliflower,Celery,Corn,Cucumber,Marjoram,Potatoes,Strawberry,Sunflower|Chives,Garlic,Onions
+Climbing Beans|Broccoli,Brussell Sprouts,Cabbages,Cauliflower,Corn,Lettuce,Marjoram,Radish|Beets,Chives,Garlic,Onions,Sunflower
+Beets|Bush Beans,Broccoli,Brussell Sprouts,Cabbage,Cauliflower,Lettuce,Marjoram,Onions,Potatoes,Silverbeet|Climbing Beans,Tomato
+Borage|Broccoli,Brussell Sprouts,Cabbages,Cauliflower,Cucumber,Peas,Squash,Strawberry,Tomato|None
+Cabbages|Beans,Broad Beans,Climbing Beans,Beets,Borage,Chamomile,Celery,Coriander/Dill,Cucumber,Marigold,Lettuce,Marjoram,Nasturtium,Onions,Peas,Pennyroyal,Potatoes,Rosemary,Sage|Garlic,Rue,Strawberry,Tomato
+Carrots|Beans,Chives,Coriander/Dill,Corn,Cucumber,Marigold,Lettuce,Marjoram,Onions,Peas,Radish,Rosemary,Sage,Tomato|None
+Celery|Bush Beans,Cabbages,Cauliflower,Marjoram,Peas,Tomato|Potatoes
+Cherry|Chives,Marigold,Lettuce,Nasturtium,Silverbeet,Spinach|Potatoes
+Chervil|Coriander/Dill,Garlic,Lettuce,Parsley,Radish,Yarrow|None
+Chives|Apple,Asparagus,Carrots,Cherry,Fruit Trees,Marjoram,Mulberry,Roses,Strawberry,Tomato|Beans,Broad Beans,Bush Beans,Climbing Beans,Peas
+Coriander|Brocolli,Brussell Sprouts,Cabbages,Chamomile,Chervil|Fennel
+Corn|Beans,Broad Beans,Bush Beans,Climbing Beans,Cucumber,Marjoram,Peas,Potatoes,Pumpkin,Radish,Squash,Zucchini|None
+Cucumber|Basil,Beans,Bush Beans,Borage,Broccoli,Brussell Sprouts,Cabbages,Carrots,Cauliflower,Corn,Lettuce,Marjoram,Nasturtium,Peas,Radish,Sunflower|Potatoes,Sage
+Dill|Beets,Broccoli,Brussell Sprouts,Cabbages,Carrots,Cauliflower,Celery,Chervil,Coriander/Dill,Cucumber,Fennel,Tomato|None
+Eggplant|Beans,Marjoram,Potatoes|None
+Fennel|Basil|Beans,Broad Beans,Tomato
+Marigold|Apple,Apricot,Beans,Broccoli,Brussell Sprouts,Cabbages,Cauliflower,Cherry,Fruit Trees,Lettuce,Mulberry,Roses,Strawberry,Sunflower|None
+Fruit Trees|Carrots,Chives,Marigold,Garlic,Nasturtium,Silverbeet,Spinach,Stinging Nettle,Yarrow|None
+Garlic|Apple,Apricot,Cherry,Fruit Trees,Mulberry,Rosemary,Roses|Beans,Broad Beans,Bush Beans,Climbing Beans,Cabbages,Peas,Strawberry
+Gooseberry|Tomato|None
+Grape Vine|Mulberry,Tomato,Yarrow|None
+Grass|Mulberry,Yarrow|Apple,Apricot,Cherry,Fruit Trees,Sage
+Horseradish|Apple,Apricot,Cherry,Potatoes,Roses,Sunflower|None
+Lavender|Cabbage,Garlic,Marjoram,Roses,Silverbeet,Stinging Nettle|Fennel
+Leeks|Carrots,Celery,Marjoram,Onions|None
+Lemon Balm|Apple,Apricot,Cherry,Fruit Tree,Mulberry,Roses|None
+Lettuce|Beans,Broad Beans,Climbing Beans,Beets,Cabbage,Carrots,Cherry,Chervil,Cucumber,Marigold,Marjoram,Onions,Peas,Radish,Strawberry|Parsley 
+Marjoram|Asparagus,Beans,Broad Beans,Bush Beans,Climbing Beans,Beets,Broccoli,Brussell Sprouts,Cabbage,Carrots,Cauliflower,Celery,Chervil,Coriander/Dill,Cucumber,Lettuce,Onions,Peas,Potatoes,Pumpkin,Radish,Strawberry,Spinach,Squash,Tomato,Zucchini|None
