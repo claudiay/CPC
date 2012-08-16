@@ -22,7 +22,13 @@
 				{% if square[1] == "1" and square[0] != "A" %}
 			        <br><br><br><br><br><br>
 			        {% endif %}
-			        <li><div><img src="static/eggplant.gif"></div><br>[]{{square}}]<br>
+                                <li><div>
+                                    {% if solved[square][0] in image_list %}
+                                    <img src="static/plants/{{solved[square][0]}}.gif">
+                                    {% else %}
+                                    <img src="static/plants/Taro.gif">
+                                    {% endif %}
+                                </div><br>[{{square}}]<br>
 					{{solved[square][0]}}<br>
 					{{benefits[square]}}</li>
 				{% endfor %}

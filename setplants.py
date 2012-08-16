@@ -2,6 +2,11 @@
 # Returns a dictionary of plant placement on the graph.
 from grid import generate_squares, generate_peers
 
+def image_list():
+    f = open("plantdata/images.txt")
+    return [p.strip() for p in f]
+
+
 def create_grid(squares, picked_plants):
     """Convert grid to a dict of possible values {square:[avaliable plants]}"""
     return dict((s, picked_plants) for s in squares)
@@ -46,6 +51,12 @@ def square_benefit(values, plant, square, guide, peers):
 	        score = score - 1
     return score
 
+def clean_dict(values):
+    for square in values:
+        clean = remove_nums(values[square][0])
+        values[square][0] = clean
+    return values
+
 def solve(guide, picked_plants, width, length):
     peers = generate_peers(width, length)
     squares = generate_squares(width, length)
@@ -57,29 +68,16 @@ def solve(guide, picked_plants, width, length):
         # Find max beneficial plant for each square.
         benefit, picked = max((square_benefit(values, p, square, guide, peers), p) 
 		for p in values[square])
-        print "for %s, place %s, with benefit: %s" %(square, picked, benefit)
         assign(values, square, picked)
     for square in values:
         plant = values[square][0]
         benefits[square] = square_benefit(values, plant, square, guide, peers)   
+    clean_dict(values)
     return values,benefits
 
 
 def main():
-    picked_plants = ['corn231', 'corn2', 'tomato1', 'tomato2', 'tomato3', 
-    		     'strawberry1', 'strawberry2', 'strawberry3', 'potato1']
-    guide = {'corn': 
-    		{'friend':['tomato'], 'avoid':['potato']},
-    	     'tomato':
-	     	{'friend':['strawberry'], 'avoid':['potato']},
-	     'strawberry':
-	     	{'friend':['tomato'], 'avoid':[]},
-	     'potato':
-	     	{'friend':[], 'avoid':['corn']}
-	    }
-    print solve(guide, picked_plants, 3, 3)
-
-
+    pass
 
 if __name__ == '__main__':
     main()

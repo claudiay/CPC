@@ -38,30 +38,11 @@ def info():
 			list_len=list_len, longitude=longitude,
 			latitude=latitude)
 
-# Step 1.2
-# Generates list of plants, caps the list at the size of the plot.
-@app.route("/list", methods=["GET"])
-def modify_list():
-    size = int(request.args['size'])
-    return render_template('/list.html', size=size)
-
-
-# Generates plots and plants, for user to place any pre-planned plants
-@app.route("/plots", methods=["POST"])
-def create_plot():
-    width = int(request.form['width'])
-    length = int(request.form['length'])
-    squares = generate_squares(width, length)
-    plot_width = width * 117
-    plant_width = 350
-    if len(squares) > 20:
-        plant_width = 500
-    return render_template('/plots.html', squares=squares, plot_width=plot_width,
-    			plant_width=plant_width)
 
 # Returns Optimal Garden layout
 @app.route('/fin', methods=['POST'])
 def show_plot():
+    image_list = setplants.image_list()
     plant_count = json.loads(request.form.get('plant_counts'))
     length = int(json.loads(request.form.get('plot_length')))
     width = int(json.loads(request.form.get('plot_width')))
@@ -79,7 +60,7 @@ def show_plot():
                                         width, length)
     order = generate_squares(width, length)
     return render_template('/fin.html', order=order,
-            solved=solved, benefits=benefits)
+            solved=solved, benefits=benefits, image_list=image_list)
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
