@@ -12,14 +12,19 @@
 	<div id="header">
 		<h1>Companion Planting Companion</h1>
 	</div>
-	<div id="menu">
+	<div id="main">
+		
+	<div class="box">
 	{{season}}:{{state}}>{{city}}>{{width}}x{{length}}<br>
 	long: {{longitude}}, lat: {{latitude}}
 	<div id="count" value="{{side}}">
-		<a href="/fin" id="done">DONE!</a></h3> 
+		<a href="/fin" id="done" class="button">Create Garden</a></h3> 
 		<h3>Total Squares: {{ width * length }}</h3>
                 <h3 id="total-picked">Total Picked: <span>0</span>
 	</div>
+	</div>
+	
+	<div class="box">
 	<div id="plantslist">
 	<div id="right">	
 	{% for i in range(list_len,2*list_len) %}
@@ -54,7 +59,8 @@
 	{% endfor %}
 	</div>
 	</div>
-	<br><br>
+	</div>
+	
 	</div>
 
         <form action="{{ url_for("show_plot") }}" method="POST">
