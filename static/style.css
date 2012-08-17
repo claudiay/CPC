@@ -5,31 +5,42 @@ body {
 	margin:0;
 	padding:0;
 }
+.box {
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background-color:white;
+	width:75%;
+	border:3px solid #D0D0D0;
+	margin-left: auto ;
+  	margin-right: auto ;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 5px;
+}
 div#header {
 	background-color: #009966;
 	top-position: 0px;
 	width: 100%;
+	-moz-box-shadow:    0px 3px 5px 6px #ccc;
+  	-webkit-box-shadow: 0px 3px 5px 6px #ccc;
+  	box-shadow:         0px 3px 5px 6px #ccc;
 }
 
 div#footer {
 	background-color: #009966;
 	width: 100%;
 	font-size:14px;
+	-moz-box-shadow:    0px -3px 5px 6px #ccc;
+  	-webkit-box-shadow: 0px -3px 5px 6px #ccc;
+  	box-shadow:         0px -3px 5px 6px #ccc;
 }
 h1 {
 	font-family: 'The Girl Next Door', cursive;
 	padding: 0;
 	margin: 0;
 }
-div#main {
-        background-color: #FFF;
-}
-div#menu {
-	background-color: #FFF;
-	border: 1px solid black;
-}
 div#graph {
-        background-color: #FFF;
+    background-color: #FFF;
 	border: 10px solid black;
 }
 div#right {
@@ -81,12 +92,6 @@ ul {
 		border:dashed 1px gray !important;
 		width:50px; height:50px; 
 }
-div#plots {
-		border:1px solid #000;
-		text-align: center;
-		width:auto;
-}
-
 #list div, { 
 		width:50px; height:50px; 
 		border:solid 1px black; 
@@ -97,8 +102,37 @@ div#plots {
 
 div#count a {
 	float:right;
-	border:solid 5px black;
-	background-color:#009966;
-	font-color:black;
 	margin-right:20px;
 }
+
+/* BUTTON */
+.button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#ededed;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+}.button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+}.button:active {
+	position:relative;
+	top:1px;
+}
+/* End of button */
