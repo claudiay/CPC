@@ -10,29 +10,37 @@ body {
 	border-radius: 15px;
 	background-color:white;
 	width:75%;
-	border:3px solid #D0D0D0;
+	border:0px solid #D0D0D0;
 	margin-left: auto ;
   	margin-right: auto ;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	padding: 5px;
+	-moz-box-shadow:    1px 1px 1px 2px #ccc;
+  	-webkit-box-shadow: 1px 1px 1px 2px #ccc;
+  	box-shadow:         1px 1px 1px 2px #ccc;
+}
+.shadow {
+	-moz-box-shadow:    1px 1px 1px 2px #ccc;
+  	-webkit-box-shadow: 1px 1px 1px 2px #ccc;
+  	box-shadow:         1px 1px 1px 2px #ccc;
 }
 div#header {
-	background-color: #009966;
+	background-color: #00CC66;
 	top-position: 0px;
 	width: 100%;
-	-moz-box-shadow:    0px 3px 5px 6px #ccc;
-  	-webkit-box-shadow: 0px 3px 5px 6px #ccc;
-  	box-shadow:         0px 3px 5px 6px #ccc;
+	-moz-box-shadow:    0px 1px 1px 2px #ccc;
+  	-webkit-box-shadow: 0px 1px 1px 2px #ccc;
+  	box-shadow:         0px 1px 1px 2px #ccc;
 }
 
 div#footer {
-	background-color: #009966;
+	background-color: #00CC66;
 	width: 100%;
 	font-size:14px;
-	-moz-box-shadow:    0px -3px 5px 6px #ccc;
-  	-webkit-box-shadow: 0px -3px 5px 6px #ccc;
-  	box-shadow:         0px -3px 5px 6px #ccc;
+	-moz-box-shadow:    0px -1px 1px 2px #ccc;
+  	-webkit-box-shadow: 0px -1px 1px 2px #ccc;
+  	box-shadow:         0px -1px 1px 2px #ccc;
 }
 h1 {
 	font-family: 'The Girl Next Door', cursive;
@@ -62,42 +70,27 @@ div.even {
 div.odd {
 	padding:5px;
 }
-a:link {text-decoration:none;}
-a:visited {text-decoration:none;}
+a:link {
+	text-decoration:none;
+	color:black;
+}
+a:visited {
+	text-decoration:none;
+	color:black;
+}
 a:hover {
 	text-decoration:none;
-	background-color:#B8B8B8;
+	color:black;
 }
 a:active {
 	text-decoration:none;
-	background-color:#B8B8B8;
+	color:black;
 }
 ul { 
 		margin:0px; 
 		padding:0px; 
 		margin-left:20px;
 		list-style-type:none; 
-}
-
-#list li {
-	font-size:10px;
-	padding:20px;
-	float:left;
-	padding:5px; 
-	width:50px; 
-	height:50px;
-}
-.placeHolder div { 
-		background-color:white !important; 
-		border:dashed 1px gray !important;
-		width:50px; height:50px; 
-}
-#list div, { 
-		width:50px; height:50px; 
-		border:solid 1px black; 
-		background-color:#E0E0E0; 
-		text-align:center; 
-		padding-top:0px;
 }
 
 div#count a {
@@ -136,3 +129,314 @@ div#count a {
 	top:1px;
 }
 /* End of button */
+
+/* Plant box */
+#sortable { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+}
+#sortable li { 
+	margin: 3px 3px 3px 0; 
+	padding: 1px; 
+	float: left;
+	width: 100px; 
+	height: 100px; 
+	text-align: center; 
+}
+li.plantbox {
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	width:100px;
+	height:100px;
+	border:0px solid #D0D0D0;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 5px;
+	font-size:12px;
+	-moz-box-shadow:    1px 1px 1px 1px #ccc;
+  	-webkit-box-shadow: 1px 1px 1px 1px #ccc;
+  	box-shadow:         1px 1px 1px 1px #ccc;
+}
+/* End of Plant box */
+
+/* Box Colors */
+.green {
+	background-color: #00CC66;
+}
+/* End of Box Colors */
+
+/* Plant Colors */
+.Apple {
+	background-color: #993333;
+	color:#FFF;
+}
+.Apricot {
+	background-color:#FFCC00;
+	color:#404040;
+}
+.Asparagus {
+	background-color:#00CC33;
+	color:#404040;
+}
+.Basil {
+	background-color:#00CC00;
+	color:#404040;
+}
+.Beans {
+	background-color:#DEB887;
+	color:#404040;
+}
+.Broad {
+	background-color:#CCFF99;
+	color:#404040;
+}
+.Bush {
+	background-color:#99FFCC;
+	color:#404040;
+}
+.Climbing {
+	background-color:#33CC33;
+	color:#404040;
+}
+.Beets {
+	background-color:#660033;
+	color:#FFF;
+}
+.Borage {
+	background-color:#3333CC;
+	color:#FFF;
+}
+.Broccoli {
+	background-color:#33CC33;
+	color:#404040;
+}
+.Brussell {
+	background-color:#00CC00;
+	color:#404040;
+}
+.Cabbages {
+	background-color:#006600;
+	color:#FFF;
+}
+.Chamomile {
+	background-color:#FFFFCC;
+	color:#404040;
+}
+.Carrots {
+	background-color:#FF9933;
+	color:#404040;
+}
+.Cauliflower {
+	background-color:#FFFFCC;
+	color:#404040;
+}
+.Celery {
+	background-color:#00CC33;
+	color:#FFF;
+}
+.Cherry {
+	background-color:#CC0000;
+	color:#FFF;
+}
+.Chervil {
+	background-color:#99FFCC;
+	color:#404040;
+}
+.Chives {
+	background-color:#00FF33;
+	color:#404040;
+}
+.Coriander {
+	background-color:#CCCC33;
+	color:#404040;
+}
+.Corn {
+	background-color:#FFFF66;
+	color:#404040;
+}
+.Cucumber {
+	background-color:#66CC33;
+	color:#404040;
+}
+.Dill {
+	background-color:#FFCC33;
+	color:#404040;
+}
+.Fennel {
+	background-color:#99CC99;
+	color:#404040;
+}
+.Eggplant {
+	background-color:#660099;
+	color:#FFF;
+}
+.Marigold {
+	background-color:#FF0033;
+	color:#404040;
+}
+.Fruit {
+	background-color:#993399;
+	color:#FFF;
+}
+.Garlic {
+	background-color:#CCFFFF;
+	color:#404040;
+}
+.Gooseberry {
+	background-color:#66CC99;
+	color:#404040;
+}
+.Grape {
+	background-color:#6600CC;
+	color:#FFF;
+}
+.Grass {
+	background-color:#006633;
+	color:#FFF;
+}
+.Horseradish {
+	background-color:#FFCC99;
+	color:#404040;
+}
+.Lavender {
+	background-color:#9933CC;
+	color:#FFF;
+}
+.Leeks {
+	background-color:#00FF33;
+	color:#FFF;
+}
+.Lemon {
+	background-color:#FFFF00;
+	color:#404040;
+}
+.Lettuce {
+	background-color:#00CC00;
+	color:#404040;
+}
+.Marjoram {
+	background-color:#cc3399;
+	color:#404040;
+}
+.Mints {
+	background-color:#99cc66;
+	color:#404040;
+}
+.Mustard {
+	background-color:#ffcc00;
+	color:#404040;
+}
+.Nasturtiums {
+	background-color:#cc6666;
+	color:#404040;
+}
+.Mulberry {
+	background-color:#663366;
+	color:#FFF;
+}
+.Onions {
+	background-color:#ffccff;
+	color:#404040;
+}
+.Parsley {
+	background-color:#99ffff;
+	color:#404040;
+}
+.Parsnip {
+	background-color:#669999;
+	color:#404040;
+}
+.Peas {
+	background-color:#006699;
+	color:#fff;
+}
+.Pennyroyal {
+	background-color:#cc66cc;
+	color:#404040;
+}
+.Potatoes {
+	background-color:#996633;
+	color:#FFF;
+}
+.Pumpkin {
+	background-color:#ff0033;
+	color:#404040;
+}
+.Radish {
+	background-color:#;
+	color:#404040;
+}
+.Raspberry {
+	background-color:#cc0000;
+	color:#FFF;
+}
+.Rosemary {
+	background-color:#3366cc;
+	color:#FFF;
+}
+.Roses {
+	background-color:#993300;
+	color:#FFF;
+}
+.Rue {
+	background-color:#cc66ff;
+	color:#FFF;
+}
+.Sage {
+	background-color:#003300;
+	color:#fff;
+}
+.Savory {
+	background-color:#990066;
+	color:#fff;
+}
+.Shallots {
+	background-color:#996699;
+	color:#FFF;
+}
+.Silverbeet {
+	background-color:#ffccff;
+	color:#404040;
+}
+.Spinach {
+	background-color:#33ff00;
+	color:#404040;
+}
+.Strawberry {
+	background-color:#cc0000;
+	color:#fff;
+}
+.Stinging {
+	background-color:#996666;
+	color:#fff;
+}
+.Squash {
+	background-color:#cc6600;
+	color:#404040;
+}
+.Sunflower {
+	background-color:#ffff33;
+	color:#404040;
+}
+.Tansy {
+	background-color:#336666;
+	color:#fff;
+}
+.Thyme {
+	background-color:#99cc66;
+	color:#fff;
+}
+.Tomato {
+	background-color:#ff0033;
+	color:#fff;
+}
+.Yarrow {
+	background-color:#3366ff;
+	color:#fff;
+}
+.Zucchini {
+	background-color:#cc6633;
+	color:#fff;
+}
+/* End of Plant Colors*/
