@@ -7,20 +7,20 @@ http://en.wikipedia.org/wiki/Companion_planting
 
 CPC generates the opitmal planting layout according to principles of companion planting.
 
+########
+# DEMO #
+########
+You can view the demo here: http://cpc.curlcurl.in/
+
 #############
 # Structure #
 #############
 index.html
--collects state, city, season, plot size, and list of plants
+-collects zipcode, season, plot size, and list of plants
 select_plants.html
 -user selects plants from a list of avaliable plants
-generate.html
+fin.html
 -returns the generated optimal plan
-
-
-Flask based webapp
-to run virutalenv
-$source env/bin/activate
 
 to create new DB
 -run creatdbs.py
