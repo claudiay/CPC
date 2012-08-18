@@ -59,9 +59,10 @@ def show_plot():
     solved, benefits = setplants.solve(guide, picked_plants,
                                         width, length)
     order = generate_squares(width, length)
+    total_score = sum(benefits[p] for p in benefits)
     return render_template('/fin.html', order=order,
             solved=solved, benefits=benefits, image_list=image_list,
-            length=length, width=width, box=111)
+            length=length, width=width, box=111, total_score=total_score)
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
