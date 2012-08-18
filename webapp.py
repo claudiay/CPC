@@ -60,7 +60,8 @@ def show_plot():
                                         width, length)
     order = generate_squares(width, length)
     return render_template('/fin.html', order=order,
-            solved=solved, benefits=benefits, image_list=image_list)
+            solved=solved, benefits=benefits, image_list=image_list,
+            length=length, width=width, box=111)
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
