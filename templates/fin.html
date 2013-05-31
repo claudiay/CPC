@@ -50,17 +50,17 @@ $(function() {
 			<ul id="sortable">
 				{% for square in order %}
 					{% if square[1] == "1" and square[0] != "A" %}
-			        {% endif %}
-				<li class="plantbox {{solved[square][0]}}">
-					{% if solved[square][0] in image_list %}
-                    <img src="static/plants/{{solved[square][0]}}.gif">
-                    {% else %}
-                    <img src="static/plants/Taro.gif">
-                    {% endif %}
-                	<br>[{{square}}]<br>
-					{{solved[square][0]}}<br>
-					{{benefits[square]}}
-				</li>
+			                {% endif %}
+                                        <li class="plantbox {{solved[square][0]}}">
+					    {% if solved[square][0] in image_list %}
+                                                <img src="static/plants/{{solved[square][0]}}.gif">
+                                            {% else %}
+                                                <img src="static/plants/Taro.gif">
+                                            {% endif %}
+                	                    <br>[{{square}}]<br>
+				            {{solved[square][0]}}<br>
+				            {{benefits[square]}}
+				        </li>
 				{% endfor %}
 			</ul>
 			</div>
