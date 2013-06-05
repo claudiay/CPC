@@ -5,3 +5,11 @@ Companion planting is the planting of different crops in proximity (in gardening
 
 CPC generates the opitmal planting layout according to principles of companion planting by integrating constraint propagation and search.
 
+### To Do
+------------------------------------------------------------
+* Make suggestions for plants that pair well
+* Reject 1x1 plots
+* Remove seasons and zipcodes
+* Restyle base layout
+* Rewrite plots into objects
+
