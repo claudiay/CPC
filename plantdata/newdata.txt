@@ -1,7 +1,7 @@
 Apple|Chives,Marigold,Garlic,Horseradish,Lemon Balm,Mustard,Nasturtiums,Spinach,Tansy,Yarrow|Grass,Potatoes
 Apricot|Basil,Marigold,Garlic,Nasturtium,Spinach,Stinging Nettle,Sunflower,Yarrow|Tomato
 Asparagus|Basil,Marjoram,Parsley,Tomato|None
-Basil|Apricot,Asparagus,Chives,Cucumber,Fennel,Tomato|Rue,Silverbeet 
+Basil|Apricot,Asparagus,Chives,Cucumber,Fennel,Tomato|Rue,Silverbeet
 Beans|Broccoli,Brussell Sprouts,Cabbages,Carrots,Cauliflower,Corn,Cucumber,Marigold,Grape Vine,Lettuce,Marjoram,Parsley,Peas,Potatoes,Rosemary,Sage,Savory|Chives,Fennel,Garlic,Onions
 Broad Beans|Broccoli,Brussell Sprouts,Cabbages,Cauliflower,Corn,Lettuce,Marjoram,Potatoes,Spinach|Chives,Fennel,Garlic,Onions
 Bush Beans|Beets,Broccoli,Brussell Sprouts,Cabbages,Cauliflower,Celery,Corn,Cucumber,Marjoram,Potatoes,Strawberry,Sunflower|Chives,Garlic,Onions
@@ -34,7 +34,7 @@ Horseradish|Apple,Apricot,Cherry,Potatoes,Roses,Sunflower|None
 Lavender|Cabbage,Garlic,Marjoram,Roses,Silverbeet,Stinging Nettle|Fennel
 Leeks|Carrots,Celery,Marjoram,Onions|None
 Lemon Balm|Apple,Apricot,Cherry,Fruit Tree,Mulberry,Roses|None
-Lettuce|Beans,Broad Beans,Climbing Beans,Beets,Cabbage,Carrots,Cherry,Chervil,Cucumber,Marigold,Marjoram,Onions,Peas,Radish,Strawberry|Parsley 
+Lettuce|Beans,Broad Beans,Climbing Beans,Beets,Cabbage,Carrots,Cherry,Chervil,Cucumber,Marigold,Marjoram,Onions,Peas,Radish,Strawberry|Parsley
 Marjoram|Asparagus,Beans,Broad Beans,Bush Beans,Climbing Beans,Beets,Broccoli,Brussell Sprouts,Cabbage,Carrots,Cauliflower,Celery,Chervil,Coriander,Dill,Cucumber,Lettuce,Onions,Peas,Potatoes,Pumpkin,Radish,Strawberry,Spinach,Squash,Tomato,Zucchini|None
 Mints|Cabbages,Tomato|Carrots,Parsley
 Mustard|Apple,Apricot,Cherry,Fruit Trees,Grape Vine,Nasturtium|None

@@ -1,18 +1,9 @@
+#!/usr/bin/env python
 """
 This program creates new databases for all tables included in model.py.
 """
 import json, model
-from model import Plants, Location
-
-def upload_locations(file_name):
-    f = open(file_name)
-    for line in f:
-        entry = line.strip().replace(' " ', "").replace(' "', "").replace('"', "").split(",")
-        print entry
-        location = Location(*entry)
-        model.add(location)
-        model.save_all()
-    f.close()
+from model import Plants
 
 def upload_plants(file_name):
     # Grab the json string from data.txt
@@ -25,7 +16,7 @@ def upload_plants(file_name):
         plant = Plants(*entry)
         model.add(plant)
         model.save_all()
-    f.close
+    f.close()
         
 
 def check():
@@ -42,7 +33,6 @@ def main():
     run = check()
     if run == True:
         model.db.create_all()
-	upload_locations("plantdata/zips.csv")
 	upload_plants('plantdata/newdata.txt')
 
 
