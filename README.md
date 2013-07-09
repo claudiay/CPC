@@ -9,7 +9,6 @@ CPC generates the opitmal planting layout according to principles of companion p
 ------------------------------------------------------------
 * Make suggestions for plants that pair well
 * Reject 1x1 plots
-* Remove seasons and zipcodes
 * Restyle base layout
 * Rewrite plots into objects
 
