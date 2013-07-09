@@ -62,8 +62,6 @@ def solve(guide, picked_plants, width, length):
     squares = generate_squares(width, length)
     values = create_grid(squares, picked_plants)
     benefits = {}
-    if all(len(values[s]) == 1 for s in squares):
-        return values # Fin!
     for square in values:
         # Find max beneficial plant for each square.
         benefit, picked = max((square_benefit(values, p, square, guide, peers), p) 
@@ -73,11 +71,6 @@ def solve(guide, picked_plants, width, length):
         plant = values[square][0]
         benefits[square] = square_benefit(values, plant, square, guide, peers)   
     clean_dict(values)
-    return values,benefits
+    return values, benefits
 
 
-def main():
-    pass
-
-if __name__ == '__main__':
-    main()

@@ -4,7 +4,7 @@ import setplants, json
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import distinct
 from grid import generate_squares
-from model import Location, Plants, db
+from model import Plants, db
 
 app = Flask(__name__)
 
@@ -47,6 +47,7 @@ def show_plot():
                                             'avoid':plant.avoid}
     solved, benefits = setplants.solve(guide, picked_plants,
                                         width, length)
+    print solved, benefits
     order = generate_squares(width, length)
     total_score = sum(benefits[p] for p in benefits)
     return render_template('/fin.html', order=order,

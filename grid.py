@@ -61,8 +61,5 @@ def find_peers(plot, grid):
         bottom = grid[current_row+1][current_col-2:current_col+1]
     return top + sidel + sider + bottom
 
-def main():
-    pass
-
 if __name__ == '__main__':
     main()
