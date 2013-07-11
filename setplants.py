@@ -59,31 +59,36 @@ def clean_dict(values):
         values[square][0] = clean
     return values
 
+def score(values):
+    values = list(values)
+    current = {}
+    benefits = {}
+    for i in range(len(values)):
+        value = values[i]
+        current[value] = [picked_plants[i]]
+    for square in current:
+        plant = current[square][0]
+        benefits[square] = square_benefit(current, plant, square, guide, peers)   
+    total = sum(benefits.itervalues())
+
+    return total, values
+
 def solve(guide, picked_plants, width, length):
     peers = generate_peers(width, length)
     squares = generate_squares(width, length)
     base_values = create_grid(squares, picked_plants)
-    benefits = {}
     best_current = None
     best_benefits = None
     best_total = None
     
-    # TODO make sure repeat veggies are not overdone
-    # TODO speed this up, and rearrange code
+    patterns = {}
     for values in permutations(base_values, len(base_values)):
-        values = list(values)
-        current = {}
-        for i in range(len(values)):
-            value = values[i]
-            current[value] = [picked_plants[i]]
-        for square in current:
-            plant = current[square][0]
-            benefits[square] = square_benefit(current, plant, square, guide, peers)   
-        total = sum(benefits.itervalues())
-        if (best_total is None) or (best_total < total):
-            best_current = deepcopy(current)
-            best_benefits = deepcopy(benefits)
-            best_total = total
+        if patterns.get(values, True):
+            patterns[values] = True
+    
+    planting_score, values = max(score(values) for values in patterns)
+    
+     
     clean_dict(best_current)
     return best_current, best_benefits
 
