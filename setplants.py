@@ -6,7 +6,6 @@ def image_list():
     f = open("plantdata/images.txt")
     return [p.strip() for p in f]
 
-
 def create_grid(squares, picked_plants):
     """Convert grid to a dict of possible values {square:[avaliable plants]}"""
     return dict((s, picked_plants) for s in squares)
