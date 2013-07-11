@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # Returns a dictionary of plant placement on the graph.
 from grid import generate_squares, generate_peers
+from itertools import permutations
+from copy import deepcopy
 
 def image_list():
     f = open("plantdata/images.txt")
@@ -38,6 +40,7 @@ def square_benefit(values, plant, square, guide, peers):
     score = 0
     plant = remove_nums(plant)
     square_peers = peers[square]
+    
     # Check benefit/cost for assigned squares.
     for peer in square_peers:
         if len(values[peer]) == 1: # if assigned
@@ -59,17 +62,29 @@ def clean_dict(values):
 def solve(guide, picked_plants, width, length):
     peers = generate_peers(width, length)
     squares = generate_squares(width, length)
-    values = create_grid(squares, picked_plants)
+    base_values = create_grid(squares, picked_plants)
     benefits = {}
-    for square in values:
-        # Find max beneficial plant for each square.
-        benefit, picked = max((square_benefit(values, p, square, guide, peers), p) 
-		for p in values[square])
-        assign(values, square, picked)
-    for square in values:
-        plant = values[square][0]
-        benefits[square] = square_benefit(values, plant, square, guide, peers)   
-    clean_dict(values)
-    return values, benefits
+    best_current = None
+    best_benefits = None
+    best_total = None
+    
+    # TODO make sure repeat veggies are not overdone
+    # TODO speed this up, and rearrange code
+    for values in permutations(base_values, len(base_values)):
+        values = list(values)
+        current = {}
+        for i in range(len(values)):
+            value = values[i]
+            current[value] = [picked_plants[i]]
+        for square in current:
+            plant = current[square][0]
+            benefits[square] = square_benefit(current, plant, square, guide, peers)   
+        total = sum(benefits.itervalues())
+        if (best_total is None) or (best_total < total):
+            best_current = deepcopy(current)
+            best_benefits = deepcopy(benefits)
+            best_total = total
+    clean_dict(best_current)
+    return best_current, best_benefits
 
 
