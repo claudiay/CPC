@@ -62,7 +62,6 @@ def solve(guide, picked_plants, width, length):
     Compares the benefits of each setting of plants, and returns the highest
     score."""
 
-    picked_plants = [remove_nums(word) for word in picked_plants]
     peers = generate_peers(width, length)
     squares = generate_squares(width, length)
     

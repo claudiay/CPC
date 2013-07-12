@@ -39,15 +39,13 @@ def show_plot():
     picked_plants = []
     for key in plant_count:
         if plant_count[key] > 0:
-            print plant_count[key]
             for i in range(plant_count[key]):
                 plant = db.session.query(Plants).get(int(key))
-                picked_plants.append(plant.name+str(i))
+                picked_plants.append(plant.name)
                 guide[plant.name] = {'friend':plant.friend,
                                             'avoid':plant.avoid}
     solved, benefits = setplants.solve(guide, picked_plants,
                                         width, length)
-    print solved, benefits
     order = generate_squares(width, length)
     total_score = sum(benefits[p] for p in benefits)
     return render_template('/fin.html', order=order,
