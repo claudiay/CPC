@@ -17,23 +17,15 @@ def prepicked_values(grid, squares):
     """Convert grid into a dict of {square:char} with "." for empty."""
     pass
 
-def remove_nums(word):
-    letters = []
-    for c in word:
-        if c.isdigit() == False:
-            letters.append(c)
-    return ''.join(letters)
-
 def square_benefit(values, plant, square, guide, peers):
     """Returns benefit of placing the plant in that square."""
     score = 0
-    plant = remove_nums(plant)
     square_peers = peers[square]
     
     # Check benefit/cost for assigned squares.
     for peer in square_peers:
         if len(values[peer]) == 1: # if assigned
-            peer_plant = remove_nums(values[peer][0])
+            peer_plant = values[peer][0]
             if peer_plant in guide[plant]['avoid']:
 	        score = score - 5
 	    elif peer_plant in guide[plant]['friend']:
