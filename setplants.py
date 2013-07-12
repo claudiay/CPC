@@ -17,17 +17,6 @@ def prepicked_values(grid, squares):
     """Convert grid into a dict of {square:char} with "." for empty."""
     pass
 
-def assign(values, square, plant):
-    """Eliminates all other values besides plant from square.
-    Elminates plant from all other squares."""
-    values[square]=[plant] # assign plant to plot
-    for plot in values:
-        # remove plant from all other plots
-        if plot != square and values[plot].count(plant) >= 1:
-	    i = values[plot].index(plant) 
-	    values[plot].pop(i) # removed assigned plant from list
-    return values
-
 def remove_nums(word):
     letters = []
     for c in word:
@@ -53,43 +42,36 @@ def square_benefit(values, plant, square, guide, peers):
 	        score = score - 1
     return score
 
-def clean_dict(values):
-    for square in values:
-        clean = remove_nums(values[square][0])
-        values[square][0] = clean
-    return values
+def set_plants(squares, picked_plants):
+    picked_plants = list(picked_plants)
+    return {squares[i]:[picked_plants[i]] for i in range(len(squares))}
 
-def score(values):
-    values = list(values)
-    current = {}
+def score(squares, picked_plants, peers, guide):
+    current = set_plants(squares, picked_plants)
     benefits = {}
-    for i in range(len(values)):
-        value = values[i]
-        current[value] = [picked_plants[i]]
+    
     for square in current:
         plant = current[square][0]
         benefits[square] = square_benefit(current, plant, square, guide, peers)   
+    
     total = sum(benefits.itervalues())
-
-    return total, values
+    return total, picked_plants, benefits
 
 def solve(guide, picked_plants, width, length):
+    """Iterates through all possible ordering of the plants.
+    Compares the benefits of each setting of plants, and returns the highest
+    score."""
+
+    picked_plants = [remove_nums(word) for word in picked_plants]
     peers = generate_peers(width, length)
     squares = generate_squares(width, length)
-    base_values = create_grid(squares, picked_plants)
-    best_current = None
-    best_benefits = None
-    best_total = None
     
-    patterns = {}
-    for values in permutations(base_values, len(base_values)):
-        if patterns.get(values, True):
-            patterns[values] = True
+    patterns = {plants:True 
+            for plants in permutations(picked_plants, len(picked_plants))}
     
-    planting_score, values = max(score(values) for values in patterns)
+    planting_score, best_values, best_benefits = max(
+            score(squares, plants, peers, guide) for plants in patterns)
     
-     
-    clean_dict(best_current)
-    return best_current, best_benefits
+    return set_plants(squares, best_values), best_benefits
 
 
