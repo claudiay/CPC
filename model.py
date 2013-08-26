@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import json
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
@@ -31,21 +32,3 @@ class Plants(db.Model):
                 'name': self.name,
                 }
 
-# "zip code", "state abbreviation", "latitude", "longitude", "city", "state"
-class Location(db.Model):
-    id = db.Column(db.Integer, primary_key = True)
-    zipcode = db.Column(db.String(15), nullable = False)
-    state_abbrevation = db.Column(db.String(2), nullable = False)
-    latitude = db.Column(db.String(15), nullable = False)
-    longitude = db.Column(db.String(15), nullable = False)
-    city = db.Column(db.String(30), nullable = True)
-    state = db.Column(db.String(30), nullable = False)
-
-    def __init__(self, zipcode, state_abbrevation, latitude,
-    		longitude, city, state):
-        self.zipcode = zipcode
-	self.state_abbrevation = state_abbrevation
-	self.latitude = latitude
-	self.longitude = longitude
-	self.city = city
-	self.state = state

@@ -15,8 +15,7 @@
 	<div id="main">
 		
 	<div class="box">
-	{{season}}:{{state}}>{{city}}>{{width}}x{{length}}<br>
-	long: {{longitude}}, lat: {{latitude}}
+	{{width}}x{{length}}<br>
 	<div id="count" value="{{side}}">
 		<a href="/fin" id="done" class="button">Create Garden</a></h3> 
 		<h3>Total Squares: {{ width * length }}</h3>
@@ -39,9 +38,9 @@
 	{% endif %}		
 	-{{plant_list[i]['name']}} 
         <span class="choice" id="counter-{{plant_list[i]['id']}}">
-		<button class="plus">+</button>
-                <span>0</span>
 		<button class="minus">-</button>
+                <span>0</span>
+		<button class="plus">+</button>
 	</span>
 	</div>	
 	{% endfor %}
@@ -55,9 +54,9 @@
 	{% endif %}
 	-{{plant_list[i]['name']}} 
         <span class="choice" id="counter-{{plant_list[i]['id']}}">
-            <button class="plus">+</button>
-            <span>0</span>
             <button class="minus">-</button>
+            <span>0</span>
+            <button class="plus">+</button>
 	</span>
 	</div>
 	{% endfor %}

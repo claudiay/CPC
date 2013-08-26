@@ -4,7 +4,7 @@ import setplants, json
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy import distinct
 from grid import generate_squares
-from model import Location, Plants, db
+from model import Plants, db
 
 app = Flask(__name__)
 
@@ -12,32 +12,21 @@ app = Flask(__name__)
 # Asks for zipcode, season, and plot size 
 @app.route("/")
 def home():
-    seasons = ['Spring', 'Summer', 'Fall', 'Winter']
-    return render_template('/index.html', seasons=seasons)
+    return render_template('/index.html')
 
 # Step 1
 # Asks user to select plants.
 @app.route("/select_plants", methods=["GET"])
 def info():
-    zipcode = request.args['zip_code']
-    season = request.args['season_id']
     width = int(request.args['plot-width'])
     length = int(request.args['plot-length'])
-    location = db.session.query(Location).filter(Location.zipcode == zipcode).one()
-    state = location.state
-    city = location.city
-    latitude = location.latitude
-    longitude = location.longitude
     plant_list = db.session.query(Plants).all()
     json_plants = [ plant.serialize for plant in plant_list ]
     list_len = int(len(plant_list)/2)
     g.json = json
-    return render_template('/select_plants.html', season=season,
-			width=width, length=length, state=state,
-			city=city, plant_list=json_plants,
-			list_len=list_len, longitude=longitude,
-			latitude=latitude)
-
+    return render_template('/select_plants.html',
+			    width=width, length=length, plant_list=json_plants,
+			    list_len=list_len)
 
 # Returns Optimal Garden layout
 @app.route('/fin', methods=['POST'])
@@ -50,10 +39,9 @@ def show_plot():
     picked_plants = []
     for key in plant_count:
         if plant_count[key] > 0:
-            print plant_count[key]
             for i in range(plant_count[key]):
                 plant = db.session.query(Plants).get(int(key))
-                picked_plants.append(plant.name+str(i))
+                picked_plants.append(plant.name)
                 guide[plant.name] = {'friend':plant.friend,
                                             'avoid':plant.avoid}
     solved, benefits = setplants.solve(guide, picked_plants,
