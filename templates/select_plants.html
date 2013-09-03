@@ -1,81 +1,63 @@
-<!DOCTYPE HTML>
-
-<html>
-<head>
-<link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" media="screen" href="/static/style.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-<script src="static/js/application.js" type="text/javascript"></script>
-	<title>Companion Planting Companion</title>
-</head>
-<body>
-	<div id="header">
-		<h1><a href="/">Companion Planting Companion</a></h1>
-	</div>
-	<div id="main">
-		
-	<div class="box">
-	{{width}}x{{length}}<br>
-	<div id="count" value="{{side}}">
-		<a href="/fin" id="done" class="button">Create Garden</a></h3> 
-		<h3>Total Squares: {{ width * length }}</h3>
-                <h3 id="total-picked">Total Picked: <span>0</span>
-	</div>
-	</div>
+{% extends "base.html" %}
+{% block main %}	
+<div class="box">
+    {{width}}x{{length}}<br>
+    <div id="count" value="{{side}}">
+	<a href="/fin" id="done" class="btn btn-success btn-lg">Create Garden</a> 
+	<h3>Total Squares: {{ width * length }}</h3>
+        <h3 id="total-picked">Total Picked: <span>0</span>
+    </div>
+</div>
 	
-	<div class="box green">
-	<b>Tip!</b> A large variety of plants tends to help produce better results.
-	</div>
+<div class="box green">
+    <b>Tip!</b> A variety of plants tends to help produce better results.
+</div>
 	
-	<div class="box">
-	<div id="plantslist">
+<div class="box">
+    <div id="plantslist">
 	<div id="right">	
 	{% for i in range(list_len,2*list_len) %}
-	{% if i % 2 == 0 %}
-	<div class="even">
-	{% else %}
-	<div class="odd">
-	{% endif %}		
-	-{{plant_list[i]['name']}} 
-        <span class="choice" id="counter-{{plant_list[i]['id']}}">
-		<button class="minus">-</button>
-                <span>0</span>
-		<button class="plus">+</button>
-	</span>
-	</div>	
+	    <div class={% if i % 2 == 0 %}"even"{% else %}"odd"{% endif %}>	
+	        -{{plant_list[i]['name']}} 
+                <span class="choice" id="counter-{{plant_list[i]['id']}}">
+                    <button class="minus btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-minus"> </span>
+                    </button>
+                    <span>0</span>
+                    <button class="plus btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-plus"> </span>
+                    </button>
+	        </span>
+	    </div>	
 	{% endfor %}
 	</div>
 	<div id="left">
 	{% for i in range(0,list_len) %}
-	{% if i % 2 == 0 %}
-	<div class="even">
-	{% else %}
-	<div class="odd">
-	{% endif %}
-	-{{plant_list[i]['name']}} 
-        <span class="choice" id="counter-{{plant_list[i]['id']}}">
-            <button class="minus">-</button>
-            <span>0</span>
-            <button class="plus">+</button>
-	</span>
-	</div>
+	    <div class={% if i % 2 == 0 %}"even"{% else %}"odd"{% endif %}>
+	        -{{plant_list[i]['name']}} 
+                <span class="choice" id="counter-{{plant_list[i]['id']}}">
+                    <button class="minus btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-minus"> </span>
+                    </button>
+                    <span>0</span>
+                    <button class="plus btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-plus"> </span>
+                    </button>
+	        </span>
+	    </div>
 	{% endfor %}
 	</div>
-	</div>
-	</div>
-	
-	</div>
+    </div>
+</div>
+{% endblock %}
 
-        <form action="{{ url_for("show_plot") }}" method="POST">
-            <input type="hidden" name="plant_counts" id="plant-counts"></input>
-            <input type="hidden" name="plot_width" id="plot-width"></input>
-            <input type="hidden" name="plot_length" id="plot-length"></input>
-        </form>
- <div id="footer">
-	<br><br><br>
- </div>    
-</body>
+<form action="{{ url_for("show_plot") }}" method="POST">
+    <input type="hidden" name="plant_counts" id="plant-counts"></input>
+    <input type="hidden" name="plot_width" id="plot-width"></input>
+    <input type="hidden" name="plot_length" id="plot-length"></input>
+</form>
 
+{% block end %}
 <script type="text/javascript">
 var plot_width = {{ width }};
 var plot_length = {{ length }};
@@ -138,7 +120,5 @@ var main = function() {
 $(document).ready(main);
 
 </script>
+{% endblock %}
 
-
-
-</html>

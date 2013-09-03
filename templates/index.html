@@ -1,20 +1,7 @@
-<!DOCTYPE HTML>
+{% extends "base.html" %}
 
-<html>
-<head>
-<link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" media="screen" href="/static/style.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-<script src="static/js/application.js" type="text/javascript"></script>
-	<title>Companion Planting Companion</title>
-</head>
-<body>
-	<div id="header">
-		<h1><a href="/">Companion Planting Companion</a></h1>
-	</div>
-	
-	<div id="main">
-	<div class="box">
+{% block main %}
+<div class="box">
 	<p> Welcome to Companion Planting Companion. 
 	<p>Companion planting is the planting of different crops in proximity (in gardening and agriculture), on the theory that they assist each other in nutrient uptake, pest control, pollination, and other factors necessary to increasing crop productivity. Companion planting is a form of polyculture.	
 	<p>This is a three step process,
@@ -29,25 +16,19 @@
 	<form action="/select_plants">	
 		<h3>Select Plot Size:</h3>	
 		Width:
-			<select name="plot-width">
+		    <select name="plot-width">
 			{% for num in range(9) %}
 			<option>{{num+1}}</option>
 			{% endfor %}
-			</select>
+                    </select><br>
 		Length:
-			<select name="plot-length">
+		    <select name="plot-length">
 			{% for num in range(24) %}
 			<option>{{num+1}}</option>
 			{% endfor %}
-		</select>
-		<input type="submit" name="action" value="Submit" />
+                    </select><br>
+		<input type="submit" name="action" value="Submit" class="btn btn-primary"/>
 	</form>
 	</center>
-	</div>
-	</div>
-	<div id="footer">
-		<br><center>
-		<br><br></center>
-	</div>
-</body>
-</html>
+    </div>
+{% endblock %}
