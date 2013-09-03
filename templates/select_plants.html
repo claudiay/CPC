@@ -49,13 +49,13 @@
 	</div>
     </div>
 </div>
-{% endblock %}
 
 <form action="{{ url_for("show_plot") }}" method="POST">
     <input type="hidden" name="plant_counts" id="plant-counts"></input>
     <input type="hidden" name="plot_width" id="plot-width"></input>
     <input type="hidden" name="plot_length" id="plot-length"></input>
 </form>
+{% endblock %}
 
 {% block end %}
 <script type="text/javascript">
