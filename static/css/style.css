@@ -26,28 +26,18 @@ body {
   	box-shadow:         1px 1px 1px 2px #ccc;
 }
 div#header {
-	background-color: #00CC66;
-	top-position: 0px;
+	background-color: #16a085;
+        top-position: 0px;
 	width: 100%;
-        padding-top: 50px;
-        -moz-box-shadow:    0px 1px 1px 2px #ccc;
-  	-webkit-box-shadow: 0px 1px 1px 2px #ccc;
-  	box-shadow:         0px 1px 1px 2px #ccc;
+        padding-top: 90px;
 }
 
-div#footer {
-	background-color: #00CC66;
-	width: 100%;
-	font-size:14px;
-	-moz-box-shadow:    0px -1px 1px 2px #ccc;
-  	-webkit-box-shadow: 0px -1px 1px 2px #ccc;
-  	box-shadow:         0px -1px 1px 2px #ccc;
+h1 a, h1 a:hover, h1 a:visited, h1 a:active {
+        color: #fff;
+        font-size: 200%;
+        text-decoration: none;
 }
-h1 {
-	font-family: 'The Girl Next Door', cursive;
-	padding: 0;
-	margin: 0;
-}
+
 div#graph {
     background-color: #FFF;
 	border: 10px solid black;

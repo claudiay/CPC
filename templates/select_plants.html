@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block main %}	
-<div class="box">
+<div class="col-md-8 col-md-offset-2">
     {{width}}x{{length}}<br>
     <div id="count" value="{{side}}">
 	<a href="/fin" id="done" class="btn btn-success btn-lg">Create Garden</a> 
@@ -9,11 +9,13 @@
     </div>
 </div>
 	
-<div class="box green">
-    <b>Tip!</b> A variety of plants tends to help produce better results.
+<div class="col-md-8 col-md-offset-2">
+    <div class="alert alert-success">
+        <b>Tip!</b> A variety of plants tends to help produce better results.
+    </div>
 </div>
 	
-<div class="box">
+<div class="col-md-8 col-md-offset-2">
     <div id="plantslist">
 	<div id="right">	
 	{% for i in range(list_len,2*list_len) %}

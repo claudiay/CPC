@@ -34,26 +34,28 @@ $(function() {
 {% endblock %}
 
 {% block main %}
-<div class="plotbox shadow">
-                <h2>Plot</h2>
-                        <div class="box green">
-                            Score: {{total_score}}
-                        </div>    
-			<div class="row">
-			<ul id="sortable">
-				{% for square in order %}
-					{% if square[1] == "1" and square[0] != "A" %}
-			                {% endif %}
-                                        <li class="plantbox {{solved[square][0]}}">
-					    {% if solved[square][0] in image_list %}
-                                                <img src="static/plants/{{solved[square][0]}}.gif">
-                                            {% else %}
-                                                <img src="static/plants/Taro.gif">
-                                            {% endif %}
-                	                    <br>[{{square}}]<br>
-				            {{solved[square][0]}}<br>
-				            {{benefits[square]}}
-				        </li>
-				{% endfor %}
-                            </ul>
+<div class="col-md-4">
+    <h2>Plot</h2>
+    <div class="col-md-4 col-md-offset-2">
+        Score: {{total_score}}
+    </div>    
+    <div class="col-md-10 col-md-offset-2">
+	<ul id="sortable">
+	    {% for square in order %}
+		{% if square[1] == "1" and square[0] != "A" %}
+		{% endif %}
+                <li class="plantbox {{solved[square][0]}}">
+		    {% if solved[square][0] in image_list %}
+                        <img src="static/plants/{{solved[square][0]}}.gif">
+                    {% else %}
+                        <img src="static/plants/Taro.gif">
+                    {% endif %}
+                    <br>[{{square}}]<br>
+		    {{solved[square][0]}}<br>
+		    {{benefits[square]}}
+		</li>
+	    {% endfor %}
+        </ul>
+    </div>
+</div>
 {% endblock %}
