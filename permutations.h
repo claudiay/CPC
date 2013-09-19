@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include <string.h>
 
+typedef struct plot {
+    char **plants;
+    int score;
+} plot;
+
+
 
 void show(char *array[], int size) {
     int i;
@@ -27,15 +33,11 @@ unsigned long perm_size(int size) {
     return permutations;
 }
 
-dict *perms(char *array[], int size) {
-    dict *table;
-    int size_of_table = 12354;
+plot *perms(char *array[], int size) {
+    plot *best_plot;
     int i;
     unsigned long count=0;
     unsigned long size_perm = perm_size(size) / 2; //ignore reverse cases
-    
-    // Create hash table
-    table = create_dict(size_of_table);
     
     // go through perms, only one way
     while (count < size_perm) {
@@ -47,6 +49,6 @@ dict *perms(char *array[], int size) {
         count++;
     }
      
-    return table;
+    return best_plot;
 }
 
