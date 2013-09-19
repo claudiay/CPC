@@ -9,6 +9,11 @@ static PyObject *compare(PyObject *self, PyObject *args) {
     if (!PyArg_ParseTuple(args, "i", &size))
         return NULL;
 
+    Py_BEGIN_ALLOW_THREADS
+    // do threading here
+
+
+    Py_END_ALLOW_THREADS
     return Py_BuildValue("i", size);
 }
 
