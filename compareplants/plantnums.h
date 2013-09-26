@@ -3,7 +3,7 @@
 #define ASPARAGUS       3
 #define BASIL           4
 #define BEANS           5
-#define BROAD_BEADS     6
+#define BROAD_BEANS     6
 #define BUSH_BEANS      7
 #define CLIMBING_BEANS  8
 #define BEETS           9

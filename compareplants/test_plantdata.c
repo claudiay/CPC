@@ -6,7 +6,8 @@ int main () {
     Benefit *benefits = create_benefits();
     printf("created benefits\n");
 
-    printf("first friend of basil is: %d\n", benefits[BASIL].friends[0]);
+    printf("first friend of apple is: %d\n", benefits[APPLE].friends[0]);
+    printf("last friend of apple is: %d\n", benefits[APPLE].friends[29]);
 
     free_benefits(benefits);
 
