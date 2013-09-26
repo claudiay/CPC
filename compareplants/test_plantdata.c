@@ -7,11 +7,18 @@ int main () {
     printf("created benefits\n");
 
     printf("first friend of apple is: %d\n", benefits[APPLE].friends[0]);
-    printf("last friend of apple is: %d\n", benefits[APPLE].friends[29]);
+    
+    int i, j;
+    for (i=1; i < VARIETY; i++) {
+        j=0;
+        while (benefits[i].friends[j] != 0)
+            j++;
+        printf("%d ", j);
+    }
 
     free_benefits(benefits);
 
-    printf("Freed!\n");
+    printf("\nFreed!\n");
 
 
     return 1;

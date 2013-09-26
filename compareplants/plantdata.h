@@ -4,8 +4,8 @@
 #define VARIETY 68
 
 typedef struct Benefit {
-    int friends[30];
-    int foes[30];
+    int friends[27];
+    int foes[7];
 } Benefit;
 
 
